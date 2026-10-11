@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahlensysteme bis Mittwoch</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main>
+<p class="kicker">AIIT · HTL Rennweg · 1. Klasse</p>
+<h1>Zahlensysteme bis Mittwoch</h1>
+<p class="lede">Fünf kurze Lektionen, ein Trainer zum Üben und ein Lernheft zum Ausdrucken. Ziel: jede Umwandlung und jede Rechnung – auch in Systemen, die ihr nie hattet.</p>
+
+<div class="key"><p><b>Die ganze Sache in drei Sätzen:</b> Jede Stelle ist <b>Basis-mal</b> so viel wert wie die rechts daneben. Hinein ins Dezimalsystem mit <b>Ziffer × Stellenwert</b>, hinaus mit <b>Division mit Rest</b>. Zwischen binär und hex: <b>4er-Blöcke</b>. Minus geht auch als <b>Ersatzaddition</b> mit der Komplementärzahl.</p></div>
+
+<h2>Lernplan</h2>
+<div class="trap" style="font-family:var(--sans);font-size:.95rem"><p>In der Mitschrift steht <b>„WH → 15. Okt 2026“</b> – also vermutlich Donnerstag, nicht Mittwoch. Bitte kurz nachfragen; der Plan unten passt für beide Termine.</p></div>
+<p class="muted" style="font-family:var(--sans);font-size:.95rem">Reihenfolge nach der Mitschrift aus dem Unterricht: zuerst, was sicher drankommt. Lieber jeden Tag 30–45 Minuten als alles am letzten Tag.</p>
+<div class="cards" id="cards">
+<a class="card" href="lessons/0001-jede-basis-nach-dezimal.html" data-k="L1"><div class="when">Samstag · Kern</div><div class="t">1 · Binär/hex → dezimal</div><div class="d">Stellenwert-Methode (im Heft: 1C23₁₆ = 1·16³ + …). Bonus: fremde Systeme wie das 50er.</div></a>
+<a class="card" href="lessons/0002-dezimal-in-jede-basis.html" data-k="L2"><div class="when">Samstag · Kern</div><div class="t">2 · Dezimal → binär/hex</div><div class="d">Divisionsmethode mit Rest, Reste in umgekehrter Reihenfolge.</div></a>
+<a class="card" href="lessons/0003-binaer-hex-oktal.html" data-k="L3"><div class="when">Sonntag · Kern</div><div class="t">3 · Binär ↔ hex (4er-Blöcke)</div><div class="d">„Von rechts die 4er-Blöcke bilden, nicht von links.“ Oktal = Bonus.</div></a>
+<a class="card" href="lessons/0006-komplement-ersatzaddition.html" data-k="L6"><div class="when">Sonntag · Kern · neu</div><div class="t">6 · Komplementärzahl &amp; Ersatzaddition</div><div class="d">Subtrahieren durch Addieren – dezimal (auch mit Komma) und binär.</div></a>
+<a class="card" href="lessons/0007-binaer-multiplizieren.html" data-k="L7"><div class="when">Montag · Kern · neu</div><div class="t">7 · Binär multiplizieren</div><div class="d">Schriftlich, Zeilen versetzt, Überprüfung im Dezimalsystem. Plus MSB/LSB.</div></a>
+<a class="card" href="lessons/0004-rechnen-in-jeder-basis.html" data-k="L4"><div class="when">Montag</div><div class="t">4 · Plus und Minus in jeder Basis</div><div class="d">Binär addieren (Kern) – oktal/hex rechnen ist Bonus.</div></a>
+<a class="card" href="lessons/0005-testsimulation.html" data-k="L5"><div class="when">Dienstag (+ Mittwoch)</div><div class="t">5 · Generalprobe</div><div class="d">14 gemischte Aufgaben wie im Unterricht, 35 Minuten, Note geschätzt. Mehrmals machen!</div></a>
+</div>
+
+<h2>Werkzeuge</h2>
+<div class="cards">
+<a class="card" href="trainer.html"><div class="t">Trainer</div><div class="d">Endlos üben – Themen frei wählbar, mit Rechenweg bei jedem Fehler. Plus Rechenweg-Rechner für Eltern.</div></a>
+<a class="card" href="reference/spickzettel.html"><div class="t">Spickzettel</div><div class="d">Alles auf zwei Seiten. Zum Wiederholen am Testtag in der Früh.</div></a>
+<a class="card" href="reference/lernheft.pdf"><div class="t">Lernheft (PDF)</div><div class="d">Erklärungen, Beispiele, Übungsblätter, Probetest und Lösungen mit Rechenweg – zum Ausdrucken.</div></a>
+</div>
+<p class="hint">Lernheft auch als <a href="reference/lernheft.html">HTML-Version</a> (gleicher Inhalt, druckbar).</p>
+
+<div class="ask">💬 <b>Für Eltern:</b> Wenn ihr etwas erklären wollt, ist der <a href="trainer.html#rechner">Rechenweg-Rechner</a> praktisch – Zahl eingeben, kompletten Lösungsweg sehen. Und Fragen jederzeit an Claude.</div>
+</main>
+<script src="assets/uebung.js"></script>
+<script>
+document.querySelectorAll('#cards .card').forEach(c => {
+  const s = window.Uebung && Uebung.store.get(c.dataset.k);
+  if (s) c.querySelector('.d').insertAdjacentHTML('beforeend', ' <b style="color:var(--ok)">· zuletzt ' + s.pct + ' %</b>');
+});
+</script>
+</body>
+</html>

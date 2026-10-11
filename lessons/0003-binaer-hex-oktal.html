@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binär ↔ Hex/Oktal</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zahlensysteme</a> › Lektion 3</p>
+<p class="kicker">Lektion 3 · ca. 20 Minuten</p>
+<h1>Die Abkürzung: binär ↔ hex und oktal</h1>
+<p class="lede">Zwischen binär, hex und oktal brauchst du <em>keinen</em> Umweg übers Dezimalsystem. Du bündelst einfach Bits – das ist schneller und sicherer.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen: <span class="n">45<sub>10</sub></span> binär? <span class="muted">(erst auf Papier, dann klicken)</span></summary><p>45 = 32 + 8 + 4 + 1 → <span class="n">101101<sub>2</sub></span>. Falls nicht: <a href="0002-dezimal-in-jede-basis.html">Lektion 2</a>.</p></details>
+
+<h2>Warum das geht</h2>
+<p><b>16 = 2⁴</b>. Mit genau 4 Bit kannst du 0 bis 15 darstellen – das sind genau die 16 Hex-Ziffern 0–F. Also: <b>4 Bit = 1 Hex-Ziffer</b>.</p>
+<p><b>8 = 2³</b>. Mit 3 Bit schaffst du 0 bis 7 – genau die Oktal-Ziffern. Also: <b>3 Bit = 1 Oktal-Ziffer</b>.<span class="sidenote">Darum benutzt die Technik Hex so gern: es ist eine Kurzschrift für Binär. Siehe <a href="https://www.mikrocontroller.net/articles/Zahlensysteme">mikrocontroller.net</a>.</span></p>
+
+<div class="key">
+<p><b>Binär → hex/oktal:</b> Von <b>rechts</b> in 4er-Bündel (hex) bzw. 3er-Bündel (oktal) teilen, links mit Nullen auffüllen, jedes Bündel einzeln ausrechnen.</p>
+<p><b>Hex/oktal → binär:</b> Jede Ziffer einzeln in 4 bzw. 3 Bit verwandeln und aneinanderhängen.</p>
+</div>
+
+<p>Die Bündel rechnest du mit den Stellenwerten <b>8-4-2-1</b> aus (Lektion 1, nur klein). Diese Tabelle solltest du bis Mittwoch fast auswendig können – vor allem die Hex-Spalte:</p>
+<div id="t16" class="scroll"></div>
+
+<div class="stepper">
+<h3>Beispiel 1: <span class="n">1101011<sub>2</sub></span> → hex und oktal</h3>
+<div class="step"><b>Hex:</b> von rechts 4er-Bündel: <span class="mono">110 1011</span> → links auffüllen: <span class="mono">0110 1011</span></div>
+<div class="step"><span class="mono">0110</span> = 4+2 = <b>6</b> · <span class="mono">1011</span> = 8+2+1 = 11 = <b>B</b> → <span class="n">6B<sub>16</sub></span></div>
+<div class="step"><b>Oktal:</b> von rechts 3er-Bündel: <span class="mono">1 101 011</span> → <span class="mono">001 101 011</span> → <b>1</b>, 4+1 = <b>5</b>, 2+1 = <b>3</b> → <span class="n">153<sub>8</sub></span></div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 2: <span class="n">A5<sub>16</sub></span> → binär</h3>
+<div class="step">A = 10 = 8 + 2 → <span class="mono">1010</span></div>
+<div class="step">5 = 4 + 1 → <span class="mono">0101</span> <span class="muted">(immer volle 4 Bit, auch mit Nullen vorne!)</span></div>
+<div class="step">Zusammen: <span class="n">10100101<sub>2</sub></span></div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 3: hex → oktal? Über binär! <span class="n">2A3<sub>16</sub></span></h3>
+<div class="step">Hex → binär: <span class="mono">2 → 0010 · A → 1010 · 3 → 0011</span> → <span class="mono">001010100011</span></div>
+<div class="step">Neu bündeln, diesmal in <b>3er</b> von rechts: <span class="mono">001 010 100 011</span></div>
+<div class="step"><span class="mono">1 · 2 · 4 · 3</span> → <span class="n">1243<sub>8</sub></span>. Probe: 512 + 128 + 32 + 3 = 675 = <span class="n">2A3<sub>16</sub></span> ✓</div>
+</div>
+
+<div class="trap"><p>Immer von <b>rechts</b> bündeln! Von links bündeln ergibt eine falsche Zahl, wenn die Bitanzahl nicht genau aufgeht.</p></div>
+<div class="trap"><p>Beim Zurückverwandeln jede Ziffer mit <b>vollen</b> 4 (bzw. 3) Bit schreiben: 5 ist <span class="mono">0101</span>, nicht <span class="mono">101</span> – sonst rutschen alle Stellen.</p></div>
+
+<h2>Jetzt du</h2>
+<p>Gemischt mit zwei Aufgaben aus den Lektionen 1 und 2.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://www.mikrocontroller.net/articles/Zahlensysteme">mikrocontroller.net: Zahlensysteme</a> – mit Umrechnungstabelle und Beispielen aus der Technik. Für Oktal: <a href="https://de.wikibooks.org/wiki/Mathematikunterricht/_Sek/_Zahlensysteme/_Oktale_Zahlen">Wikibooks: Oktale Zahlen</a>.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Warum muss ich von rechts bündeln?“</div>
+
+<div class="nav"><a href="0002-dezimal-in-jede-basis.html">← Lektion 2</a><a href="0004-rechnen-in-jeder-basis.html">Lektion 4: Plus und Minus in jeder Basis →</a></div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script src="../assets/uebung.js"></script>
+<script>
+document.getElementById('t16').innerHTML = Zahlen.table16();
+Uebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: bündeln', storeKey: 'L3', count: 10,
+  specs: [
+    { kind: 'binHex' }, { kind: 'hexBin' }, { kind: 'binOct' }, { kind: 'octBin' }, { kind: 'binHex' },
+    { kind: 'hexOct' }, { kind: 'octHex' }, { kind: 'hexBin' }, { kind: 'fromDec', base: 2 }, { kind: 'toDec', base: 16 }
+  ]
+});
+</script>
+</body>
+</html>

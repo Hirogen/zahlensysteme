@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahlensysteme-Trainer</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="index.html">Zahlensysteme</a> › Trainer</p>
+<h1>Trainer</h1>
+<p class="lede">Wähle die Themen, die noch wackeln. Gemischt üben ist anstrengender – und genau deshalb bleibt es besser hängen.</p>
+
+<form id="pick" class="box">
+<b style="font-family:var(--sans)">Themen</b>
+<div class="checks">
+<label><input type="checkbox" value="toDec" checked> → dezimal (2/8/16)</label>
+<label><input type="checkbox" value="toDecF"> → dezimal (fremde Basis)</label>
+<label><input type="checkbox" value="fromDec" checked> dezimal → (2/8/16)</label>
+<label><input type="checkbox" value="fromDecF"> dezimal → (fremde Basis)</label>
+<label><input type="checkbox" value="bundle" checked> binär ↔ hex/oktal</label>
+<label><input type="checkbox" value="hexOct"> hex ↔ oktal</label>
+<label><input type="checkbox" value="add" checked> Addition (2/8/16)</label>
+<label><input type="checkbox" value="sub" checked> Subtraktion (2/8/16)</label>
+<label><input type="checkbox" value="calcF"> + / − in fremder Basis</label>
+<label><input type="checkbox" value="kompl" checked> Komplementärzahl</label>
+<label><input type="checkbox" value="ersatz" checked> Ersatzaddition</label>
+<label><input type="checkbox" value="mul" checked> binär multiplizieren</label>
+<label><input type="checkbox" value="valid"> gültige Ziffern?</label>
+<label><input type="checkbox" value="stellen"> Stellen &amp; Bit zählen</label>
+</div>
+<div class="ueb-row"><label style="font-family:var(--sans)">Aufgaben pro Runde <input type="number" id="n" value="12" min="3" max="50"></label><button type="submit">Los geht's</button></div>
+</form>
+<div id="ueb"></div>
+
+<h2 id="rechner">Rechenweg-Rechner</h2>
+<p>Für eigene Zahlen (z. B. aus der Hausübung): zeigt den vollständigen Lösungsweg. <b>Erst selbst rechnen, dann kontrollieren</b> – sonst lernt man nichts.</p>
+<div id="pg"></div>
+</main>
+<script src="assets/zahlen.js"></script>
+<script src="assets/uebung.js"></script>
+<script>
+const MAP = {
+  toDec: [{ kind: 'toDec', base: 2 }, { kind: 'toDec', base: 8 }, { kind: 'toDec', base: 16 }],
+  toDecF: [{ kind: 'toDec', base: 'fremd' }],
+  fromDec: [{ kind: 'fromDec', base: 2 }, { kind: 'fromDec', base: 8 }, { kind: 'fromDec', base: 16 }],
+  fromDecF: [{ kind: 'fromDec', base: 'fremd' }],
+  bundle: [{ kind: 'binHex' }, { kind: 'hexBin' }, { kind: 'binOct' }, { kind: 'octBin' }],
+  hexOct: [{ kind: 'hexOct' }, { kind: 'octHex' }],
+  add: [{ kind: 'add', base: 2 }, { kind: 'add', base: 8 }, { kind: 'add', base: 16 }],
+  sub: [{ kind: 'sub', base: 2 }, { kind: 'sub', base: 8 }, { kind: 'sub', base: 16 }],
+  calcF: [{ kind: 'add', base: 'fremd' }, { kind: 'sub', base: 'fremd' }],
+  kompl: [{ kind: 'komplDez' }, { kind: 'komplBin' }],
+  ersatz: [{ kind: 'ersatzDez' }, { kind: 'ersatzBin' }],
+  mul: [{ kind: 'mulBin' }],
+  valid: [{ kind: 'valid' }],
+  stellen: [{ kind: 'stellen' }]
+};
+const form = document.getElementById('pick');
+form.onsubmit = (e) => {
+  e.preventDefault();
+  const specs = [...form.querySelectorAll('input[type=checkbox]:checked')].flatMap(c => MAP[c.value]);
+  if (!specs.length) return alert('Bitte mindestens ein Thema wählen.');
+  const n = Math.max(3, Math.min(50, +document.getElementById('n').value || 12));
+  Uebung.mount(document.getElementById('ueb'), { title: 'Trainer', specs, count: n, storeKey: 'trainer' });
+  document.getElementById('ueb').scrollIntoView({ behavior: 'smooth' });
+};
+Uebung.playground(document.getElementById('pg'));
+</script>
+</body>
+</html>

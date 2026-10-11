@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dezimal → jede Basis</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zahlensysteme</a> › Lektion 2</p>
+<p class="kicker">Lektion 2 · ca. 25 Minuten</p>
+<h1>Von dezimal in jede Basis</h1>
+<p class="lede">Lektion 1 war der Weg <em>hinein</em> ins Dezimalsystem. Jetzt der Weg <em>hinaus</em> – wieder ein einziges Rezept für alle Systeme.</p>
+
+<h2>Kurz aufwärmen</h2>
+<details class="box"><summary style="cursor:pointer">Ohne nachzuschauen: Wie viel ist <span class="n">1A<sub>16</sub></span> dezimal? <span class="muted">(erst im Kopf rechnen, dann klicken)</span></summary><p>1·16 + 10·1 = <b>26</b>. Wenn das saß: weiter. Wenn nicht: kurz <a href="0001-jede-basis-nach-dezimal.html">Lektion 1</a> anschauen.</p></details>
+
+<h2>Warum Division mit Rest funktioniert</h2>
+<p>Teil <span class="n">347</span> durch 10: <span class="mono">347 : 10 = 34 Rest <b>7</b></span>. Der Rest ist genau die <b>letzte Ziffer</b>! Mach mit 34 weiter: <span class="mono">34 : 10 = 3 Rest <b>4</b></span>, dann <span class="mono">3 : 10 = 0 Rest <b>3</b></span>. Die Reste sind die Ziffern – von hinten nach vorne.</p>
+<p>Teilst du statt durch 10 durch eine andere Basis, bekommst du die Ziffern <b>in dieser Basis</b>.<span class="sidenote">Diese „Divisions-Rest-Methode“ wird z. B. bei <a href="https://de.wikibooks.org/wiki/Digitale_Schaltungstechnik/_umrechnen/_Basis_2">Wikibooks</a> und im <a href="https://www7content.cs.fau.de/data/inf1nf/2019w/uebung/ueb1/uebung01Umrechnung.pdf">Übungsblatt der FAU</a> vorgerechnet.</span></p>
+
+<div class="key">
+<p><b>Divisions-Rest-Methode</b> (dezimal → Basis b):</p>
+<ol style="margin:.3rem 0">
+<li>Zahl durch <b>b</b> teilen, <b>Rest</b> notieren.</li>
+<li>Mit dem Ergebnis weitermachen – bis das Ergebnis <b>0</b> ist.</li>
+<li>Die Reste <b>von unten nach oben</b> lesen.</li>
+</ol>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 1: <span class="n">675<sub>10</sub></span> → hex</h3>
+<div class="step"><span class="mono">675 : 16 = 42 Rest 3</span><br><span class="hint">Ohne Taschenrechner: 16·40 = 640, bleiben 35; 35 = 2·16 + 3 → also 42 Rest 3.</span></div>
+<div class="step"><span class="mono">42 : 16 = 2 Rest 10</span> → Rest 10 schreibt man als <b>A</b>.</div>
+<div class="step"><span class="mono">2 : 16 = 0 Rest 2</span> → Ergebnis ist 0, also <b>Schluss</b>.</div>
+<div class="step">Reste von unten nach oben: <b class="mono">2 A 3</b> → <span class="n">2A3<sub>16</sub></span>.<br><b>Probe</b> mit Lektion 1: 2·256 + 10·16 + 3 = 675 ✓ <span class="muted">– die Probe kostet 30 Sekunden und rettet Punkte.</span></div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 2: <span class="n">45<sub>10</sub></span> → binär</h3>
+<div class="step">
+<table class="calc div"><tr><td>45 : 2</td><td>= 22</td><td>Rest <b>1</b></td></tr><tr><td>22 : 2</td><td>= 11</td><td>Rest <b>0</b></td></tr><tr><td>11 : 2</td><td>= 5</td><td>Rest <b>1</b></td></tr><tr><td>5 : 2</td><td>= 2</td><td>Rest <b>1</b></td></tr><tr><td>2 : 2</td><td>= 1</td><td>Rest <b>0</b></td></tr><tr><td>1 : 2</td><td>= 0</td><td>Rest <b>1</b> ↑</td></tr></table></div>
+<div class="step">Von unten nach oben: <span class="n">101101<sub>2</sub></span>. Probe: 32 + 8 + 4 + 1 = 45 ✓</div>
+<div class="step"><b>Abkürzung für binär:</b> Zweierpotenzen abziehen. Größte Potenz ≤ 45 ist 32 → Rest 13. Dann 16? nein (0). 8? ja (1) → 5. 4? ja (1) → 1. 2? nein (0). 1? ja (1). → <span class="mono">1 0 1 1 0 1</span>. Nimm die Methode, die dir lieber ist.</div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 3: <span class="n">3657<sub>10</sub></span> → 50er-System</h3>
+<div class="step"><span class="mono">3657 : 50 = 73 Rest 7</span> <span class="hint">(50·73 = 3650)</span></div>
+<div class="step"><span class="mono">73 : 50 = 1 Rest 23</span> → die Ziffer ist <b>23</b> (eine einzige Ziffer!)</div>
+<div class="step"><span class="mono">1 : 50 = 0 Rest 1</span> → Schluss.</div>
+<div class="step">Von unten nach oben: <span class="n">(1)(23)(7)<sub>50</sub></span> – genau die Zahl aus Lektion 1. Hin und zurück passt ✓</div>
+</div>
+
+<div class="trap"><p>Reste <b>von unten nach oben</b> lesen. Wer von oben liest, bekommt die Ziffern verkehrt herum – sehr häufiger Fehler.</p></div>
+<div class="trap"><p>Reste ab 10 werden im Hex-System zu <b>A–F</b> (10=A, 11=B, 12=C, 13=D, 14=E, 15=F). Ein Rest kann nie ≥ Basis sein – sonst hast du dich verrechnet.</p></div>
+
+<h2>Jetzt du</h2>
+<p>Gemischt mit zwei Aufgaben aus Lektion 1 – damit du beide Richtungen nicht verwechselst.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://de.wikibooks.org/wiki/Digitale_Schaltungstechnik/_umrechnen/_Basis_2">Wikibooks: Digitale Schaltungstechnik – Umrechnen Basis 2</a> – die Divisions-Rest-Methode Schritt für Schritt.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Wie teile ich 1000 durch 16 ohne Taschenrechner?“</div>
+
+<div class="nav"><a href="0001-jede-basis-nach-dezimal.html">← Lektion 1</a><a href="0003-binaer-hex-oktal.html">Lektion 3: Abkürzung binär ↔ hex/oktal →</a></div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script src="../assets/uebung.js"></script>
+<script>
+Uebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: aus dem Dezimalsystem', storeKey: 'L2', count: 10,
+  specs: [
+    { kind: 'fromDec', base: 16 }, { kind: 'fromDec', base: 2 }, { kind: 'fromDec', base: 8 },
+    { kind: 'fromDec', base: 'fremd' }, { kind: 'fromDec', base: 16 }, { kind: 'fromDec', base: 2 },
+    { kind: 'fromDec', base: 50 }, { kind: 'toDec', base: 16 }, { kind: 'toDec', base: 'fremd' }, { kind: 'stellen' }
+  ]
+});
+</script>
+</body>
+</html>

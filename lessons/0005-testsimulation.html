@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testsimulation</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zahlensysteme</a> › Lektion 5</p>
+<p class="kicker">Lektion 5 · ca. 35 Minuten · am Tag vor dem Test</p>
+<h1>Generalprobe</h1>
+<p class="lede">Alles gemischt, mit Zeitlimit, Feedback erst am Schluss – so wie im Test. Die Aufgaben entsprechen dem, was laut Mitschrift im Unterricht drankam (plus eine Bonus-Aufgabe in einem fremden System). Jeder Durchgang hat neue Zahlen, du kannst ihn also mehrmals machen.</p>
+
+<h2>Spielregeln</h2>
+<ul>
+<li>Papier und Stift bereitlegen. <b>Rechenweg aufschreiben</b> – im echten Test gibt es dafür Teilpunkte.</li>
+<li>Kein Taschenrechner, keine Lektionen offen. Der <a href="../reference/spickzettel.html">Spickzettel</a> bleibt zu.</li>
+<li>Nach dem Abgeben: Bei jeder roten Aufgabe den <b>Schritt finden</b>, an dem es schiefging.</li>
+</ul>
+
+<div id="test"></div>
+
+<h2>Fünf Regeln für den Test</h2>
+<div class="key">
+<ol style="margin:0">
+<li><b>Basis immer dazuschreiben</b> (Index, z. B. 1010<sub>2</sub>) – steht so im Heft.</li>
+<li><b>Erst schauen, welche Richtung:</b> → dezimal = Stellenwert-Methode · dezimal → = Division mit Rest · binär ↔ hex/oktal = Bündeln.</li>
+<li><b>Ersatzaddition:</b> gleich viele Stellen, Komplementärzahl, addieren, <b>erste Stelle streichen</b>.</li>
+<li><b>Überprüfung im Dezimalsystem</b> – verlangt euer Lehrer bei Addition und Multiplikation ausdrücklich.</li>
+<li><b>Unbekanntes System? Keine Panik.</b> Gleiche Rezepte – nur die Basis ist anders. Ziffern ab 10 in Klammern, falls nichts anderes vorgegeben ist.</li>
+</ol>
+</div>
+
+<div class="source"><b>Mehr Papier-Übung</b><a href="https://lehrerfortbildung-bw.de/u_berufsbezogen/profil/technik/fb3/etechnik/material/zahlen_s/1_3_zahlensysteme_schuelerversion.pdf">Arbeitsblatt Zahlensysteme (Lehrerfortbildung BW)</a> mit <a href="https://www.lehrerfortbildung-bw.de/u_berufsbezogen/profil/technik/fb3/etechnik/material/zahlen_l/1_3_zahlensysteme_lehrerversion.pdf">Lösungen</a> – ähnliches Niveau. Und natürlich der Probetest im <a href="../reference/lernheft.html">Lernheft (PDF)</a>.</div>
+<div class="ask">💬 <b>Etwas ging daneben und du weißt nicht warum?</b> Kopier die Aufgabe und deine Antwort zu Claude und frag: „Wo ist mein Fehler?“</div>
+
+<div class="nav"><a href="0007-binaer-multiplizieren.html">← Lektion 7</a><a href="../trainer.html">Freier Trainer →</a></div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script src="../assets/uebung.js"></script>
+<script>
+Uebung.test(document.getElementById('test'), {
+  title: 'Testsimulation Zahlensysteme', minutes: 35, count: 14, storeKey: 'L5',
+  specs: [
+    { kind: 'toDec', base: 2 }, { kind: 'toDec', base: 16 }, { kind: 'fromDec', base: 2 }, { kind: 'fromDec', base: 16 },
+    { kind: 'binHex' }, { kind: 'hexBin' }, { kind: 'add', base: 2 }, { kind: 'mulBin' },
+    { kind: 'komplDez' }, { kind: 'ersatzDez' }, { kind: 'komplBin' }, { kind: 'ersatzBin' },
+    { kind: 'toDec', base: 16 }, { kind: 'toDec', base: 'fremd' }
+  ]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spickzettel Zahlensysteme</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  main { max-width: 60rem; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 0 2.2rem; }
+  @media (min-width: 820px) { .grid { grid-template-columns: 1fr 1fr; } }
+  
+  h2 { font-size: 1.1rem; margin: 1.4em 0 .4em; }
+  .method td, .method th { font: .88rem/1.35 var(--sans); padding: .3rem .5rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  .method th { color: var(--muted); }
+  ul.tight { padding-left: 1.1rem; font: .92rem/1.45 var(--sans); }
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    html { font-size: 13.5px; } body { font-size: 9pt; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+    h1 { font-size: 18pt; margin: 0; } h2 { font-size: 11pt; margin: 3mm 0 1mm; border-top: .5pt solid #ccc; padding-top: 2mm; }
+    .t16 td, .t16 th { padding: 0 2mm !important; font-size: 8.5pt !important; }
+  }
+</style>
+</head>
+<body>
+<main>
+<p class="crumbs no-print"><a href="../index.html">Zahlensysteme</a> › Spickzettel</p>
+<h1>Spickzettel Zahlensysteme</h1>
+<p class="muted" style="font-family:var(--sans);margin:.2rem 0 0">Basis b · Ziffern 0 bis b−1 · jede Stelle ist b-mal so viel wert wie die rechts daneben.</p>
+
+<div class="grid">
+<section>
+<h2>Welche Methode?</h2>
+<table class="method">
+<tr><th>von → nach</th><th>Methode</th></tr>
+<tr><td>beliebig → dezimal</td><td><b>Stellenwert:</b> Ziffer × b<sup>Stelle</sup>, alles addieren. Stelle rechts = 0.</td></tr>
+<tr><td>dezimal → beliebig</td><td><b>Division mit Rest</b> durch b, bis Ergebnis 0. Reste <b>von unten nach oben</b>.</td></tr>
+<tr><td>binär → hex / oktal</td><td>Von <b>rechts</b> 4er- / 3er-Bündel, links mit 0 auffüllen.</td></tr>
+<tr><td>hex / oktal → binär</td><td>Jede Ziffer → <b>volle</b> 4 / 3 Bit.</td></tr>
+<tr><td>hex ↔ oktal</td><td>Über binär: auspacken, neu bündeln.</td></tr>
+<tr><td>fremd → fremd</td><td>Über dezimal: erst hinein, dann hinaus.</td></tr>
+</table>
+
+<h2>Stellenwerte</h2>
+<div class="scroll"><table class="pw">
+<tr><th>Stelle</th><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr>
+<tr><th>b = 2</th><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+<tr><th>b = 8</th><td>32768</td><td>4096</td><td>512</td><td>64</td><td>8</td><td>1</td></tr>
+<tr><th>b = 16</th><td></td><td>65536</td><td>4096</td><td>256</td><td>16</td><td>1</td></tr>
+</table></div>
+<p class="hint">Binär weiter: 2⁶ = 64 · 2⁷ = 128 · 2⁸ = 256 · 2⁹ = 512 · 2¹⁰ = 1024</p>
+
+<h2>Beispiele</h2>
+<ul class="tight">
+<li><span class="n">2A3<sub>16</sub></span> = 2·256 + 10·16 + 3 = <b>675</b></li>
+<li><span class="n">243<sub>5</sub></span> = 2·25 + 4·5 + 3 = <b>73</b></li>
+<li><span class="n">(1)(23)(7)<sub>50</sub></span> = 1·2500 + 23·50 + 7 = <b>3657</b></li>
+<li>675 : 16 = 42 R <b>3</b> · 42 : 16 = 2 R <b>10=A</b> · 2 : 16 = 0 R <b>2</b> → <span class="n">2A3<sub>16</sub></span></li>
+<li><span class="mono">1101011</span> → <span class="mono">0110 1011</span> → <span class="n">6B<sub>16</sub></span> · <span class="mono">001 101 011</span> → <span class="n">153<sub>8</sub></span></li>
+</ul>
+<h2>Rechnen in Basis b</h2>
+<ul class="tight">
+<li><b>Plus:</b> Spalte im Kopf dezimal addieren. Summe ≥ b → <b>Summe − b</b> schreiben, Übertrag 1.</li>
+<li><b>Minus:</b> oben zu klein → <b>oben + b</b> rechnen, Übertrag 1 zur unteren Ziffer der nächsten Spalte.</li>
+<li>Probe: Minus mit Plus prüfen, oder beides dezimal nachrechnen.</li>
+</ul>
+
+<h2>Stellen zählen</h2>
+<ul class="tight">
+<li>Größte n-stellige Zahl: <b>bⁿ − 1</b> (FF₁₆ = 255) · Anzahl: <b>bⁿ</b> · Bit für N: kleinstes k mit <b>2<sup>k</sup> &gt; N</b></li>
+</ul>
+</section>
+
+<section>
+<h2>0 bis 15</h2>
+<div id="t16"></div>
+<p class="hint">Bündel ausrechnen mit 8-4-2-1. A=10 B=11 C=12 D=13 E=14 F=15</p>
+
+<h2>Komplementärzahl &amp; Ersatzaddition</h2>
+<ul class="tight">
+<li><b>Dezimal:</b> jede Ziffer → 9 − z, dann <b>+1 rechts</b> (2518 → 7482; 800 → 200)</li>
+<li><b>Binär:</b> 0 ↔ 1 tauschen, dann <b>+1 rechts</b> (110 → 001 → 010)</li>
+<li>Stellenanzahl entscheidet: 97 → 03, aber 097 → 903</li>
+<li>A − B: auf gleich viele Stellen (auch nach dem Komma!), A + Komplement(B), <b>erste Stelle streichen</b></li>
+</ul>
+
+<h2>Binär multiplizieren</h2>
+<ul class="tight">
+<li>1·1 = 1, sonst 0. Pro Ziffer des 2. Faktors eine Zeile: 1 → abschreiben, 0 → Nullen, jede Zeile 1 nach rechts</li>
+<li>1011 · 101 = 110111 (11 · 5 = 55) – <b>Überprüfung im Dezimalsystem</b></li>
+<li><b>MSB</b> = linke, höchstwertige Stelle · <b>LSB</b> = rechte, Stellenwert 1</li>
+</ul>
+
+<h2>Fallen</h2>
+<ul class="tight">
+<li>Ziffer ≥ Basis gibt's nicht: <span class="n">1289<sub>8</sub></span> ist ungültig.</li>
+<li>Reste von <b>unten</b> nach oben lesen.</li>
+<li>Bündeln immer von <b>rechts</b>.</li>
+<li>Hex-Übertrag erst bei 16, Oktal bei 8 – nicht bei 10!</li>
+<li>Basis als Index dazuschreiben.</li>
+</ul>
+</section>
+</div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script>document.getElementById('t16').innerHTML = Zahlen.table16();</script>
+</body>
+</html>

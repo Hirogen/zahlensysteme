@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Komplement und Ersatzaddition</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zahlensysteme</a> › Lektion 6</p>
+<p class="kicker">Lektion 6 · ca. 30 Minuten · steht so im Unterrichtsheft</p>
+<h1>Subtrahieren durch Addieren: die Komplementärzahl</h1>
+<p class="lede">„Der PC kann nur addieren.“ Darum ersetzt man Minus durch eine <em>Ersatzaddition</em>. Genau so habt ihr es in AIIT gemacht – erst dezimal (auch mit Komma), dann binär.</p>
+
+<h2>1 · Die Komplementärzahl (dezimal)</h2>
+<div class="key">
+<p><b>Komplementärzahl bilden:</b> Jede Ziffer z durch <b>9 − z</b> ersetzen. Dann zur <b>rechtesten Ziffer 1 addieren</b>.</p>
+<p>Zahl + Komplementärzahl ergibt immer die nächste 10er-Potenz: <span class="mono">2518 + 7482 = 10000</span>.</p>
+</div>
+
+<div class="stepper">
+<h3>Beispiel: Komplementärzahl von 2518</h3>
+<div class="step">Von rechts: <span class="mono">(9 − 8) + 1 = 2</span> · <span class="mono">9 − 1 = 8</span> · <span class="mono">9 − 5 = 4</span> · <span class="mono">9 − 2 = 7</span></div>
+<div class="step">Komplementärzahl: <b class="mono">7482</b>. Probe: 2518 + 7482 = 10000 ✓</div>
+</div>
+
+<div class="trap"><p><b>Stellenanzahl entscheidet!</b> 97 und 097 sehen gleich aus, haben aber verschiedene Komplemente: 97 → <b>03</b>, 097 → <b>903</b>. Führende Nullen werden zu Neunen (9 − 0 = 9). Darum die Zahl <b>immer erst auf die Stellenanzahl der anderen Zahl auffüllen</b>.</p></div>
+<div class="trap"><p><b>Folgewirkung beim +1:</b> Ist die rechte Ziffer 0, wird 9 + 1 = 10 → Übertrag! Komplement von 800: 9−8=1, 9−0=9, 9−0=9 → 199, +1 → <b>200</b> (nicht „1910“).</p></div>
+
+<h2>2 · Ersatzaddition statt Subtraktion</h2>
+<div class="key">
+<ol style="margin:0">
+<li>Beide Zahlen auf <b>gleich viele Stellen</b> bringen (vor <b>und</b> nach dem Komma).</li>
+<li>Komplementärzahl der zweiten Zahl bilden.</li>
+<li>Die beiden Zahlen <b>addieren</b>.</li>
+<li>Die <b>erste (höchstwertige) Stelle streichen</b> – fertig.</li>
+</ol>
+</div>
+<div class="ex box" id="ex1"></div>
+<div class="ex box" id="ex2"></div>
+<p class="hint">Bei Kommazahlen kommt das +1 zur rechtesten Ziffer <b>hinter</b> dem Komma. Hat eine Zahl weniger Nachkommastellen, mit Nullen auffüllen (7893,12 → 7893,120).</p>
+
+<h2>3 · Dasselbe binär</h2>
+<div class="key">
+<p><b>Komplementärzahl einer Binärzahl:</b> 0 und 1 <b>vertauschen</b>, dann <b>+1</b> zur rechtesten Ziffer (Folgewirkung beachten: 1 + 1 = 10!).</p>
+</div>
+<div class="stepper">
+<h3>Beispiele aus dem Unterricht</h3>
+<div class="step"><span class="mono">110</span> → tauschen <span class="mono">001</span> → +1 → <b class="mono">010</b></div>
+<div class="step"><span class="mono">1111</span> → <span class="mono">0000</span> → +1 → <b class="mono">0001</b></div>
+<div class="step">Als 8-Bit-Zahl: <span class="mono">110 = 00000110</span> → <span class="mono">11111001</span> → +1 → <b class="mono">11111010</b>. Auch hier: Stellenanzahl entscheidet!</div>
+</div>
+<div class="ex box" id="ex3"></div>
+
+<h2>Jetzt du</h2>
+<p>Im Test zählt der <b>Weg</b>: Komplementärzahl hinschreiben, addieren, erste Stelle durchstreichen. Hier tippst du nur das Ergebnis ein.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://de.wikipedia.org/wiki/Zweierkomplement">Wikipedia: Zweierkomplement</a> – die binäre Komplementärzahl (tauschen, +1) und warum Subtraktion damit zur Addition wird. Euer Unterricht sagt einfach „Komplementärzahl“.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Warum darf ich die erste Stelle einfach streichen?“</div>
+
+<div class="nav"><a href="0005-testsimulation.html">← Lektion 5</a><a href="0007-binaer-multiplizieren.html">Lektion 7: Binär multiplizieren →</a></div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script src="../assets/uebung.js"></script>
+<script>
+document.getElementById('ex1').innerHTML = '<h3 style="margin-top:0">Beispiel: 238324 − 2518</h3>' + Zahlen.stepsErsatz('238324', '2518', 10).html;
+document.getElementById('ex2').innerHTML = '<h3 style="margin-top:0">Beispiel mit Komma: 7893,12 − 23,01</h3>' + Zahlen.stepsErsatz('7893,12', '23,01', 10).html;
+document.getElementById('ex3').innerHTML = '<h3 style="margin-top:0">Ersatzaddition binär: 110101 − 10011</h3>' + Zahlen.stepsErsatz('110101', '10011', 2).html;
+Uebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Komplement', storeKey: 'L6', count: 10,
+  specs: [
+    { kind: 'komplDez' }, { kind: 'komplDez' }, { kind: 'ersatzDez' }, { kind: 'komplBin' }, { kind: 'ersatzDez' },
+    { kind: 'komplBin' }, { kind: 'ersatzBin' }, { kind: 'komplDez' }, { kind: 'ersatzDez' }, { kind: 'ersatzBin' }
+  ]
+});
+</script>
+</body>
+</html>

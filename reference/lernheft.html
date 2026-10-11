@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernheft Zahlensysteme</title>
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .cover { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 2.8rem; }
+  .chapter { break-before: page; }
+  .chapter > h2:first-child { border-top: 0; margin-top: 0; font-size: 1.6rem; }
+  .chapter > .kicker { margin-top: 2rem; display: block; }
+  .ex { border: 1px solid var(--rule); border-radius: 10px; padding: .6rem 1rem; margin: .8rem 0; background: var(--paper); break-inside: avoid; }
+  .ex > h4 { margin: .2rem 0 .3rem; font: 600 1rem var(--sans); }
+  ol.blatt { list-style: none; padding: 0; counter-reset: a; display: grid; grid-template-columns: 1fr; gap: 0 1.6rem; }
+  @media (min-width: 820px) { ol.blatt { grid-template-columns: 1fr 1fr; } }
+  ol.blatt > li { counter-increment: a; border-top: 1px solid var(--rule); padding: .6rem 0 .4rem; break-inside: avoid; font-family: var(--sans); font-size: .95rem; }
+  ol.blatt > li::before { content: counter(a) ")"; font-weight: 700; margin-right: .35rem; }
+  ol.blatt .space { height: 5.5rem; }
+  ol.blatt .ans { font-size: .85rem; color: var(--muted); }
+  ol.blatt table.col { font-size: 1.1rem; }
+  .sol-item { border-top: 1px solid var(--rule); padding: .5rem 0; break-inside: avoid; font-size: .92rem; }
+  .sol-item > b:first-child { font-family: var(--sans); }
+  .plan td, .plan th { font: .92rem var(--sans); padding: .35rem .7rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+  .plan th { color: var(--muted); }
+  @media print {
+    @page { size: A4; margin: 15mm 14mm; }
+    body { font-size: 10.5pt; }
+    .cover { min-height: 240mm; }
+    ol.blatt { grid-template-columns: 1fr 1fr; gap: 0 8mm; }
+    ol.blatt .space { height: 26mm; }
+    .sol .scroll { overflow: visible; margin: 1mm 0; }
+    #loesungen { columns: 2; column-gap: 8mm; font-size: 9pt; }
+    #loesungen h3 { column-span: all; margin: 4mm 0 1mm; }
+    #loesungen p { margin: 1mm 0; }
+    #loesungen table.calc td, #loesungen table.calc th { padding: .5mm 1.5mm; font-size: 7.5pt; }
+    #loesungen table.col { font-size: 10pt; }
+    #loesungen ol.lines { font-size: 8pt; margin: 1mm 0; }
+    #loesungen .grp { padding: .5mm 2mm; min-width: 0; }
+    #loesungen .sol-item.wide { column-span: all; }
+    table.calc { font-size: 8.5pt; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<section class="cover">
+<p class="kicker">AIIT · HTL Rennweg · 1. Klasse</p>
+<h1>Lernheft Zahlensysteme</h1>
+<p class="lede">Umwandeln und Rechnen in jeder Basis – binär, oktal, hexadezimal und in Systemen, die ihr nie hattet.</p>
+<table class="plan" style="margin-top:2rem">
+<tr><th>Tag</th><th>Kapitel</th><th>Am Bildschirm</th></tr>
+<tr><td>Samstag</td><td>1 · Jede Basis → dezimal<br>2 · Dezimal → jede Basis</td><td>Lektion 1, 2</td></tr>
+<tr><td>Sonntag</td><td>3 · Binär ↔ hex<br>5 · Komplementärzahl &amp; Ersatzaddition</td><td>Lektion 3, 6</td></tr>
+<tr><td>Montag</td><td>6 · Binär multiplizieren<br>4 · Plus und Minus</td><td>Lektion 7, 4</td></tr>
+<tr><td>Dienstag</td><td>Probetest (35 min)</td><td>Lektion 5</td></tr>
+</table>
+<p class="hint" style="margin-top:2rem"><b>So benutzt du das Heft:</b> Kapitel lesen, Beispiele mit Stift nachrechnen, dann das Übungsblatt – <b>ohne</b> hinten nachzuschauen. Erst danach mit den Lösungen (letzte Seiten, mit Rechenweg) vergleichen. Jedes Übungsblatt mischt ein paar Aufgaben aus früheren Kapiteln dazu, damit nichts vergessen wird.</p>
+</section>
+
+<!-- Kapitel 1 -->
+<section class="chapter">
+<h2>1 · Jede Basis → dezimal</h2>
+<div class="key">
+<p><b>Basis b:</b> Es gibt die Ziffern <b>0 bis b−1</b>. Jede Stelle ist <b>b-mal</b> so viel wert wie die rechts daneben. Von rechts: 1, b, b², b³, …</p>
+<p><b>Stellenwert-Methode:</b> Jede Ziffer × ihr Stellenwert, dann alles addieren.</p>
+</div>
+<p>Das kennst du vom Dezimalsystem: 347 = 3·100 + 4·10 + 7·1. In anderen Systemen ersetzt du nur die 10 durch die Basis.</p>
+<div class="ex"><h4>Beispiel: <span class="n">2A3<sub>16</sub></span> (A = 10)</h4><div data-ex="toDec" data-s="2A3" data-b="16"></div></div>
+<div class="ex"><h4>Beispiel: <span class="n">10110110<sub>2</sub></span> – bei binär nur die Stellenwerte unter den Einsen addieren</h4><div data-ex="toDec" data-s="10110110" data-b="2"></div></div>
+<div class="ex"><h4>Beispiel: <span class="n">243<sub>5</sub></span> – ein „fremdes“ System, gleiches Rezept</h4><div data-ex="toDec" data-s="243" data-b="5"></div></div>
+<div class="ex"><h4>Beispiel: <span class="n">(1)(23)(7)<sub>50</sub></span> – im 50er-System stehen Ziffern ab 10 in Klammern</h4><div data-ex="toDec" data-s="(1)(23)(7)" data-b="50"></div></div>
+<div class="trap"><p>Eine Ziffer ≥ Basis gibt es nicht: <span class="n">1289<sub>8</sub></span> ist <b>ungültig</b>. Und: die rechteste Stelle ist immer b⁰ = 1.</p></div>
+<h3>Übungsblatt 1</h3>
+<ol class="blatt" data-blatt="1" data-seed="101"></ol>
+</section>
+
+<!-- Kapitel 2 -->
+<section class="chapter">
+<h2>2 · Dezimal → jede Basis</h2>
+<div class="key">
+<p><b>Divisions-Rest-Methode:</b> Zahl durch b teilen, Rest notieren, mit dem Ergebnis weiter – bis das Ergebnis 0 ist. Die Reste <b>von unten nach oben</b> gelesen ergeben die Zahl.</p>
+</div>
+<p><b>Warum?</b> 347 : 10 = 34 Rest 7 – der Rest ist die letzte Ziffer. Teilst du durch eine andere Basis, bekommst du die Ziffern in dieser Basis. <b>Ohne Taschenrechner</b> teilen: 675 : 16 → 16·40 = 640, bleibt 35 = 2·16 + 3 → 42 Rest 3.</p>
+<div class="ex"><h4>Beispiel: 675 → hex</h4><div data-ex="fromDec" data-n="675" data-b="16"></div></div>
+<div class="ex"><h4>Beispiel: 45 → binär</h4><div data-ex="fromDec" data-n="45" data-b="2"></div><p class="hint">Abkürzung für binär: Zweierpotenzen abziehen. 45 − 32 = 13 − 8 = 5 − 4 = 1 − 1 = 0 → Einsen bei 32, 8, 4, 1 → 101101.</p></div>
+<div class="ex"><h4>Beispiel: 3657 → 50er-System</h4><div data-ex="fromDec" data-n="3657" data-b="50"></div></div>
+<div class="trap"><p>Reste von <b>unten nach oben</b> lesen! Reste 10–15 im Hex-System als A–F schreiben. <b>Probe</b> mit Kapitel 1 kostet 30 Sekunden.</p></div>
+<h3>Übungsblatt 2</h3>
+<ol class="blatt" data-blatt="2" data-seed="202"></ol>
+</section>
+
+<!-- Kapitel 3 -->
+<section class="chapter">
+<h2>3 · Abkürzung: binär ↔ hex und oktal</h2>
+<div class="key">
+<p><b>16 = 2⁴ → 4 Bit = 1 Hex-Ziffer.</b> &nbsp; <b>8 = 2³ → 3 Bit = 1 Oktal-Ziffer.</b></p>
+<p>Binär → hex/oktal: von <b>rechts</b> bündeln, links mit 0 auffüllen. Hex/oktal → binär: jede Ziffer in <b>volle</b> 4 bzw. 3 Bit.</p>
+</div>
+<div style="display:flex;gap:2rem;flex-wrap:wrap;align-items:flex-start">
+<div id="t16"></div>
+<div style="flex:1 1 16rem">
+<div class="ex"><h4>Beispiel: <span class="n">1101011<sub>2</sub></span> → hex</h4><div data-ex="group" data-s="1101011" data-k="4"></div></div>
+<div class="ex"><h4>… und → oktal</h4><div data-ex="group" data-s="1101011" data-k="3"></div></div>
+</div>
+</div>
+<div class="ex"><h4>Beispiel: <span class="n">A5<sub>16</sub></span> → binär</h4><div data-ex="ungroup" data-s="A5" data-k="4"></div></div>
+<div class="ex"><h4>Beispiel: hex → oktal über binär: <span class="n">2A3<sub>16</sub></span></h4><div data-ex="ungroup" data-s="2A3" data-k="4"></div><p>Jetzt neu in <b>3er</b>-Bündel teilen:</p><div data-ex="group" data-s="1010100011" data-k="3"></div></div>
+<h3>Übungsblatt 3</h3>
+<ol class="blatt" data-blatt="3" data-seed="303"></ol>
+</section>
+
+<!-- Kapitel 4 -->
+<section class="chapter">
+<h2>4 · Plus und Minus in jeder Basis</h2>
+<div class="key">
+<p><b>Plus:</b> Spalte für Spalte von rechts, im Kopf dezimal addieren. Summe <b>≥ b</b> → <b>Summe − b</b> hinschreiben, Übertrag 1.</p>
+<p><b>Minus:</b> Obere Ziffer zu klein → <b>oben + b</b> rechnen, Übertrag 1 zur unteren Ziffer der nächsten Spalte.</p>
+</div>
+<p>Wie binär (1 + 1 = 10₂), nur dass der Übertrag bei der jeweiligen Basis kommt: im Oktalsystem bei 8, im Hex-System bei 16.</p>
+<div class="ex"><h4>Beispiel: <span class="n">357<sub>8</sub></span> + <span class="n">246<sub>8</sub></span></h4><div data-ex="add" data-a="357" data-c="246" data-b="8"></div></div>
+<div class="ex"><h4>Beispiel: <span class="n">3A7<sub>16</sub></span> + <span class="n">1C9<sub>16</sub></span></h4><div data-ex="add" data-a="3A7" data-c="1C9" data-b="16"></div></div>
+<div class="ex"><h4>Beispiel: <span class="n">623<sub>8</sub></span> − <span class="n">257<sub>8</sub></span></h4><div data-ex="sub" data-a="623" data-c="257" data-b="8"></div></div>
+<div class="ex"><h4>Beispiel: <span class="n">B42<sub>16</sub></span> − <span class="n">5E7<sub>16</sub></span></h4><div data-ex="sub" data-a="B42" data-c="5E7" data-b="16"></div></div>
+<div class="trap"><p>Hex-Übertrag erst bei <b>16</b>: 8 + 5 = 13 = D, kein Übertrag. Beim Ausborgen +b rechnen, nicht +10.</p></div>
+<h3>Übungsblatt 4</h3>
+<ol class="blatt" data-blatt="4" data-seed="404"></ol>
+</section>
+
+<!-- Kapitel 5 -->
+<section class="chapter">
+<h2>5 · Komplementärzahl &amp; Ersatzaddition</h2>
+<div class="key">
+<p><b>Komplementärzahl dezimal:</b> jede Ziffer z → <b>9 − z</b>, dann <b>+1 zur rechtesten Ziffer</b>. <b>Binär:</b> 0 und 1 tauschen, dann +1.</p>
+<p><b>Ersatzaddition A − B:</b> gleich viele Stellen (vor und nach dem Komma) → Komplementärzahl von B → A + Komplement → <b>erste Stelle streichen</b>.</p>
+</div>
+<p>„Der PC kann nur addieren“ – darum wird Subtraktion auf Addition zurückgeführt. Zahl + Komplementärzahl ergibt immer die nächste 10er-Potenz: 2518 + 7482 = 10000.</p>
+<div class="trap"><p><b>Stellenanzahl entscheidet:</b> 97 → 03, aber 097 → 903. <b>Folgewirkung:</b> 800 → 199 + 1 = <b>200</b>.</p></div>
+<div class="ex"><h4>Beispiel: 238324 − 2518</h4><div data-ex="ersatz" data-a="238324" data-c="2518" data-b="10"></div></div>
+<div class="ex"><h4>Beispiel mit Komma: 7893,12 − 23,01</h4><div data-ex="ersatz" data-a="7893,12" data-c="23,01" data-b="10"></div></div>
+<div class="ex"><h4>Beispiel binär: 110101 − 10011</h4><div data-ex="ersatz" data-a="110101" data-c="10011" data-b="2"></div></div>
+<h3>Übungsblatt 5</h3>
+<ol class="blatt" data-blatt="5" data-seed="505"></ol>
+</section>
+
+<!-- Kapitel 6 -->
+<section class="chapter">
+<h2>6 · Binär multiplizieren</h2>
+<div class="key">
+<p><b>0·0 = 0 · 1·0 = 0 · 0·1 = 0 · 1·1 = 1.</b> Für jede Ziffer des zweiten Faktors eine Zeile: bei 1 den ersten Faktor abschreiben, bei 0 Nullen – jede Zeile eine Stelle weiter rechts. Dann addieren und <b>im Dezimalsystem überprüfen</b>.</p>
+</div>
+<div class="ex"><h4>Beispiel: 1011 · 101</h4><div data-ex="mul" data-x="11" data-y="5"></div></div>
+<div class="ex"><h4>Beispiel: 111001 · 110</h4><div data-ex="mul" data-x="57" data-y="6"></div></div>
+<p><b>MSB</b> (most significant bit) = linke, höchstwertige Stelle. <b>LSB</b> (least significant bit) = rechte Stelle mit Stellenwert 1.</p>
+<h3>Übungsblatt 6</h3>
+<ol class="blatt" data-blatt="6" data-seed="606"></ol>
+</section>
+
+<!-- Probetest -->
+<section class="chapter">
+<h2>Probetest · 35 Minuten</h2>
+<p>Ohne Taschenrechner, ohne Heft. Rechenweg aufschreiben. Basis immer als Index dazuschreiben. Danach mit den Lösungen vergleichen und bei jedem Fehler den <b>Schritt</b> finden, an dem es schiefging.</p>
+<p class="hint">Grobe Notenschätzung: ab 13 richtig → 1 · ab 11 → 2 · ab 9 → 3 · ab 7 → 4 (Schlüssel geschätzt).</p>
+<ol class="blatt" data-blatt="T" data-seed="777"></ol>
+</section>
+
+<!-- Lösungen -->
+<section class="chapter sol">
+<h2>Lösungen mit Rechenweg</h2>
+<div id="loesungen"></div>
+</section>
+
+</main>
+<script src="../assets/zahlen.js"></script>
+<script>
+(function () {
+  const Z = Zahlen;
+  document.getElementById('t16').innerHTML = Z.table16();
+
+  // Beispiele mit der Engine rendern – so sind Rechenwege überall gleich.
+  document.querySelectorAll('[data-ex]').forEach(el => {
+    const d = el.dataset, b = +d.b;
+    switch (d.ex) {
+      case 'toDec': el.innerHTML = Z.stepsToDec(Z.parse(d.s, b).digits, b); break;
+      case 'fromDec': el.innerHTML = Z.stepsFromDec(+d.n, b); break;
+      case 'group': el.innerHTML = Z.stepsGroup(d.s, +d.k); break;
+      case 'ungroup': el.innerHTML = Z.stepsUngroup(Z.parse(d.s, +d.k === 4 ? 16 : 8).digits, +d.k); break;
+      case 'add': el.innerHTML = Z.stepsAdd(Z.parse(d.a, b).digits, Z.parse(d.c, b).digits, b).html; break;
+      case 'ersatz': el.innerHTML = Z.stepsErsatz(d.a, d.c, b).html; break;
+      case 'mul': el.innerHTML = Z.stepsMul(+d.x, +d.y); break;
+      case 'sub': el.innerHTML = Z.stepsSub(Z.parse(d.a, b).digits, Z.parse(d.c, b).digits, b).html; break;
+    }
+  });
+
+  const BLAETTER = {
+    1: [{ kind: 'toDec', base: 2 }, { kind: 'toDec', base: 2 }, { kind: 'toDec', base: 16 }, { kind: 'toDec', base: 16 },
+        { kind: 'toDec', base: 8 }, { kind: 'toDec', base: 5 }, { kind: 'toDec', base: 50 }, { kind: 'valid' }],
+    2: [{ kind: 'fromDec', base: 2 }, { kind: 'fromDec', base: 2 }, { kind: 'fromDec', base: 16 }, { kind: 'fromDec', base: 16 },
+        { kind: 'fromDec', base: 8 }, { kind: 'fromDec', base: 3 }, { kind: 'fromDec', base: 20 }, { kind: 'toDec', base: 16 }],
+    3: [{ kind: 'binHex' }, { kind: 'binHex' }, { kind: 'hexBin' }, { kind: 'binOct' },
+        { kind: 'octBin' }, { kind: 'hexOct' }, { kind: 'fromDec', base: 2 }, { kind: 'toDec', base: 'fremd' }],
+    4: [{ kind: 'add', base: 2 }, { kind: 'sub', base: 2 }, { kind: 'add', base: 8 }, { kind: 'sub', base: 8 },
+        { kind: 'add', base: 16 }, { kind: 'sub', base: 16 }, { kind: 'add', base: 5 }, { kind: 'binOct' }],
+    5: [{ kind: 'komplDez' }, { kind: 'komplDez' }, { kind: 'komplDez' }, { kind: 'komplBin' },
+        { kind: 'ersatzDez' }, { kind: 'ersatzDez' }, { kind: 'ersatzBin' }, { kind: 'binHex' }],
+    6: [{ kind: 'mulBin' }, { kind: 'mulBin' }, { kind: 'mulBin' }, { kind: 'mulBin' },
+        { kind: 'add', base: 2 }, { kind: 'komplBin' }, { kind: 'fromDec', base: 16 }, { kind: 'ersatzDez' }],
+    T: [{ kind: 'toDec', base: 2 }, { kind: 'toDec', base: 16 }, { kind: 'fromDec', base: 2 }, { kind: 'fromDec', base: 16 },
+        { kind: 'binHex' }, { kind: 'hexBin' }, { kind: 'add', base: 2 }, { kind: 'mulBin' },
+        { kind: 'komplDez' }, { kind: 'ersatzDez' }, { kind: 'komplBin' }, { kind: 'ersatzBin' },
+        { kind: 'toDec', base: 16 }, { kind: 'toDec', base: 'fremd' }]
+  };
+  const sol = document.getElementById('loesungen');
+  document.querySelectorAll('ol.blatt').forEach(ol => {
+    const id = ol.dataset.blatt, r = Z.rng(+ol.dataset.seed);
+    const name = id === 'T' ? 'Probetest' : 'Übungsblatt ' + id;
+    sol.insertAdjacentHTML('beforeend', '<h3>' + name + '</h3>');
+    BLAETTER[id].forEach((spec, j) => {
+      const t = Z.make(spec, r);
+      const ans = t.choices ? '<div class="ans">Kreuze an: ☐ gültig &nbsp; ☐ falsch</div>' : '<div class="space"></div><div class="ans">Antwort: ____________________</div>';
+      ol.insertAdjacentHTML('beforeend', '<li>' + t.prompt + ans + '</li>');
+      const wide = (t.kind === 'toDec' && (t.solution.match(/<td/g) || []).length > 24) || /^(ersatz|kompl|mul)/.test(t.kind);
+      sol.insertAdjacentHTML('beforeend', '<div class="sol-item' + (wide ? ' wide' : '') + '"><b>' + (j + 1) + ') ' + Z.answerText(t) + '</b>' + t.solution + '</div>');
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binär multiplizieren</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zahlensysteme</a> › Lektion 7</p>
+<p class="kicker">Lektion 7 · ca. 20 Minuten · steht so im Unterrichtsheft</p>
+<h1>Binär multiplizieren</h1>
+<p class="lede">Klingt schwer, ist aber das Einfachste von allem: Im Binärsystem gibt es nur „mal 0“ und „mal 1“.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen: <span class="n">110011<sub>2</sub></span> + <span class="n">1011<sub>2</sub></span>? <span class="muted">(Papier, dann klicken)</span></summary><p><span class="n">111110<sub>2</sub></span> (51 + 11 = 62). Bei 1 + 1 + 1 = 11: schreibe 1, Übertrag 1.</p></details>
+
+<h2>Die Regeln</h2>
+<div class="key">
+<p class="mono" style="margin:.2rem 0">0 · 0 = 0 &nbsp;&nbsp; 1 · 0 = 0 &nbsp;&nbsp; 0 · 1 = 0 &nbsp;&nbsp; 1 · 1 = 1</p>
+<p>Schriftlich wie im Dezimalsystem: Für jede Ziffer des zweiten Faktors (von links) eine Zeile. Bei <b>1</b> den ersten Faktor <b>abschreiben</b>, bei <b>0</b> nur <b>Nullen</b>. Jede Zeile rückt <b>eine Stelle nach rechts</b>. Dann alles binär addieren.</p>
+</div>
+
+<div class="ex box" id="ex1"></div>
+<div class="ex box" id="ex2"></div>
+
+<div class="trap"><p>Beim Addieren der Zeilen können in einer Spalte <b>mehr als zwei Einsen</b> stehen: 1+1+1 = 11 (schreibe 1, Übertrag 1), 1+1+1+1 = 100 (schreibe 0, Übertrag <b>10</b> – also 1 in die übernächste Spalte). Spalte für Spalte zählen!</p></div>
+<div class="trap"><p><b>Überprüfung im Dezimalsystem</b> verlangt euer Lehrer ausdrücklich: beide Faktoren und das Ergebnis dezimal umrechnen – 11 · 5 = 55 ✓.</p></div>
+
+<h2>Nebenbei: MSB und LSB</h2>
+<p>Bei <span class="n">111010<sub>2</sub></span> heißt die linke Stelle <b>MSB</b> (most significant bit, höchstwertige Stelle) und die rechte <b>LSB</b> (least significant bit, niederwertigste Stelle – Stellenwert 1). Diese Begriffe stehen im Heft und sind typisches Test-Wissen.</p>
+
+<h2>Jetzt du</h2>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://de.wikipedia.org/wiki/Dualsystem">Wikipedia: Dualsystem</a> – Abschnitt „Multiplikation“ (und Addition/Subtraktion) mit Beispielen.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Was mache ich, wenn in einer Spalte vier Einsen stehen?“</div>
+
+<div class="nav"><a href="0006-komplement-ersatzaddition.html">← Lektion 6</a><a href="0005-testsimulation.html">Zur Generalprobe →</a></div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script src="../assets/uebung.js"></script>
+<script>
+document.getElementById('ex1').innerHTML = '<h3 style="margin-top:0">Beispiel aus dem Unterricht: 1011 · 101</h3>' + Zahlen.stepsMul(11, 5);
+document.getElementById('ex2').innerHTML = '<h3 style="margin-top:0">Beispiel: 111001 · 110</h3>' + Zahlen.stepsMul(57, 6);
+Uebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: binär rechnen', storeKey: 'L7', count: 10,
+  specs: [
+    { kind: 'mulBin' }, { kind: 'mulBin' }, { kind: 'add', base: 2 }, { kind: 'mulBin' }, { kind: 'ersatzBin' },
+    { kind: 'mulBin' }, { kind: 'toDec', base: 2 }, { kind: 'mulBin' }, { kind: 'komplBin' }, { kind: 'mulBin' }
+  ]
+});
+</script>
+</body>
+</html>

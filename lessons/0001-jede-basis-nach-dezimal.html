@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jede Basis → Dezimal</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zahlensysteme</a> › Lektion 1</p>
+<p class="kicker">Lektion 1 · ca. 20 Minuten</p>
+<h1>Jede Zahl ins Dezimalsystem – egal welche Basis</h1>
+<p class="lede">Im Test kann ein System kommen, das ihr nie hattet: 5er, 20er, 50er … Mit <em>einer</em> Idee knackst du sie alle.</p>
+
+<h2>Die eine Idee: Stellenwert</h2>
+<p>In <span class="n">347</span> bedeutet die 3 nicht „drei“, sondern „dreihundert“. Jede Stelle ist <b>10-mal</b> so viel wert wie die Stelle rechts daneben:</p>
+<p style="text-align:center" class="mono">347 = 3·100 + 4·10 + 7·1</p>
+<p>Genau so funktioniert <b>jedes</b> Zahlensystem – nur die 10 wird durch die <b>Basis</b> ersetzt.<span class="sidenote">Quelle: das Stellenwert-Prinzip, wie es z. B. <a href="https://de.wikibooks.org/wiki/Mathematikunterricht/_Sek/_Zahlensysteme/_Hexadezimale_Zahlen">Wikibooks</a> und der <a href="https://studieninfo.informatik.uni-halle.de/files/2024/09/4_Zahlendarstellung.pdf">Vorkurs der Uni Halle</a> beschreiben.</span></p>
+
+<div class="key">
+<p><b>Im System mit Basis b</b> ist jede Stelle b-mal so viel wert wie die rechts daneben. Von rechts gelesen: <b>1, b, b², b³, …</b></p>
+<p>Es gibt genau b Ziffern: <b>0 bis b−1</b>. (Im 8er-System also 0–7, im 16er 0–9 und A–F.)</p>
+</div>
+
+<div class="scroll"><table class="pw">
+<tr><th>Basis</th><th>b³</th><th>b²</th><th>b¹</th><th>b⁰</th></tr>
+<tr><th>2 (binär)</th><td>8</td><td>4</td><td>2</td><td>1</td></tr>
+<tr><th>5</th><td>125</td><td>25</td><td>5</td><td>1</td></tr>
+<tr><th>8 (oktal)</th><td>512</td><td>64</td><td>8</td><td>1</td></tr>
+<tr><th>10 (dezimal)</th><td>1000</td><td>100</td><td>10</td><td>1</td></tr>
+<tr><th>16 (hex)</th><td>4096</td><td>256</td><td>16</td><td>1</td></tr>
+<tr><th>50</th><td>125000</td><td>2500</td><td>50</td><td>1</td></tr>
+</table></div>
+<p class="hint">Merke: Ganz rechts steht <b>immer</b> 1 (denn b⁰ = 1). Die nächste Stelle ist immer die Basis selbst.</p>
+
+<h2>Das Rezept: Stellenwert-Methode</h2>
+<ol>
+<li>Über jede Ziffer ihren <b>Stellenwert</b> schreiben – von rechts: 1, b, b², …</li>
+<li>Jede Ziffer <b>mal</b> ihren Stellenwert.</li>
+<li>Alles <b>zusammenzählen</b>. Fertig.</li>
+</ol>
+
+<div class="stepper">
+<h3>Beispiel 1: <span class="n">2A3<sub>16</sub></span> → dezimal</h3>
+<div class="step"><b>Stellenwerte</b> (Basis 16): von rechts 1, 16, 16² = 256.
+<div class="scroll"><table class="calc"><tr><th>Stellenwert</th><td>256</td><td>16</td><td>1</td></tr><tr><th>Ziffer</th><td class="dg">2</td><td class="dg">A</td><td class="dg">3</td></tr></table></div></div>
+<div class="step"><b>Ziffer × Stellenwert.</b> Achtung: A bedeutet 10!<br><span class="mono">2·256 = 512 &nbsp;·&nbsp; 10·16 = 160 &nbsp;·&nbsp; 3·1 = 3</span></div>
+<div class="step"><b>Addieren:</b> <span class="mono">512 + 160 + 3 = </span><b class="mono">675</b>. Also <span class="n">2A3<sub>16</sub></span> = <span class="n">675<sub>10</sub></span>.</div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 2: ein „fremdes“ System – <span class="n">243<sub>5</sub></span></h3>
+<div class="step">Basis 5 → Stellenwerte von rechts: 1, 5, 25.</div>
+<div class="step"><span class="mono">2·25 + 4·5 + 3·1 = 50 + 20 + 3 = </span><b class="mono">73</b></div>
+<div class="step">Siehst du? Das 5er-System hattet ihr nie – und trotzdem ist es <b>dasselbe Rezept</b>.</div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 3: das 50er-System – <span class="n">(1)(23)(7)<sub>50</sub></span></h3>
+<div class="step">Im 50er-System gibt es 50 Ziffern (0 bis 49). So viele Zeichen haben wir nicht – darum schreibt man jede Ziffer als Zahl <b>in Klammern</b>. Diese Zahl hat also <b>drei</b> Ziffern: 1, 23 und 7.<span class="sidenote">Manche Lehrer:innen erfinden im Test eigene Zeichen für die Ziffern. Dann einfach jedes Zeichen in seinen Wert übersetzen – das Rezept bleibt gleich.</span></div>
+<div class="step">Stellenwerte: 1, 50, 50² = 2500.</div>
+<div class="step"><span class="mono">1·2500 + 23·50 + 7·1 = 2500 + 1150 + 7 = </span><b class="mono">3657</b></div>
+</div>
+
+<div class="stepper">
+<h3>Beispiel 4: binär geht ganz schnell – <span class="n">10110110<sub>2</sub></span></h3>
+<div class="step">Stellenwerte von rechts: 1, 2, 4, 8, 16, 32, 64, 128.
+<div class="scroll"><table class="calc"><tr><th>Stellenwert</th><td>128</td><td>64</td><td>32</td><td>16</td><td>8</td><td>4</td><td>2</td><td>1</td></tr><tr><th>Bit</th><td class="dg">1</td><td class="dg">0</td><td class="dg">1</td><td class="dg">1</td><td class="dg">0</td><td class="dg">1</td><td class="dg">1</td><td class="dg">0</td></tr></table></div></div>
+<div class="step">Weil die Ziffern nur 0 oder 1 sind: einfach die Stellenwerte <b>unter den Einsen</b> addieren: <span class="mono">128 + 32 + 16 + 4 + 2 = </span><b class="mono">182</b></div>
+</div>
+
+<div class="trap"><p>Eine Ziffer, die <b>gleich groß oder größer als die Basis</b> ist, gibt es nicht. <span class="n">1289<sub>8</sub></span> ist <b>keine</b> gültige Zahl (8 und 9 gibt es im 8er-System nicht). Lehrer fragen das gern!</p></div>
+<div class="trap"><p>Stellen werden <b>von rechts</b> gezählt, und die rechteste Stelle ist <b>b⁰ = 1</b> – nicht b.</p></div>
+
+<h2>Jetzt du</h2>
+<p>Rechne auf einem <b>Blatt Papier</b> mit (wie im Test) und tipp nur das Ergebnis ein. Bei Fehlern siehst du sofort den Rechenweg – und die gleiche Aufgabenart kommt am Ende nochmal.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://de.wikibooks.org/wiki/Mathematikunterricht/_Sek/_Zahlensysteme/_Hexadezimale_Zahlen">Wikibooks: Hexadezimale Zahlen (Schulmathematik)</a> – erklärt dasselbe Prinzip am 16er-System, mit weiteren Beispielen.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag einfach Claude (deinen KI-Lehrer) – z. B. „Warum ist die rechte Stelle immer 1?“ oder „Rechne mir 7B₁₆ langsam vor.“ Keine Frage ist zu klein.</div>
+<p class="hint">Alles Wichtige zum Nachschlagen: <a href="../reference/spickzettel.html">Spickzettel</a>.</p>
+
+<div class="nav"><a href="../index.html">← Übersicht</a><a href="0002-dezimal-in-jede-basis.html">Lektion 2: Dezimal → jede Basis →</a></div>
+</main>
+<script src="../assets/zahlen.js"></script>
+<script src="../assets/uebung.js"></script>
+<script>
+Uebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: ins Dezimalsystem', storeKey: 'L1', count: 10,
+  specs: [
+    { kind: 'toDec', base: 16 }, { kind: 'toDec', base: 2 }, { kind: 'toDec', base: 8 },
+    { kind: 'toDec', base: 'fremd' }, { kind: 'toDec', base: 16 }, { kind: 'toDec', base: 'fremd' },
+    { kind: 'valid' }, { kind: 'toDec', base: 2 }, { kind: 'toDec', base: 50 }, { kind: 'valid' }
+  ]
+});
+</script>
+</body>
+</html>
