@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernheft Zeitformen</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/zeiten.css">
+<style>
+  .cover { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 2.8rem; }
+  ol.blatt { padding-left: 1.6rem; font: 1rem/1.5 var(--sans); }
+  ol.blatt > li { margin: 0 0 1.1rem; break-inside: avoid; }
+  ol.blatt i { font-family: var(--serif); font-size: 1.05em; }
+  .line { display: block; border-bottom: 1px solid var(--muted); height: 1.9rem; }
+  .line.short { width: 55%; }
+  .opts { color: var(--muted); }
+  .opts span { margin-right: 1.1rem; white-space: nowrap; }
+  .gap { color: transparent; }
+  ol.loes { font: .9rem/1.45 var(--sans); padding-left: 1.6rem; columns: 2 18rem; column-gap: 2rem; }
+  ol.loes li { break-inside: avoid; }
+  .chapter { break-before: page; }
+  .blatt-h { break-before: page; }
+  .meta { font: .85rem var(--sans); color: var(--muted); }
+  @media print {
+    @page { size: A4; margin: 15mm 14mm; }
+    html { font-size: 14px; }
+    .cover { min-height: 240mm; }
+    h2 { border-top: 0; margin-top: 0; }
+    ol.blatt > li { margin-bottom: 4.5mm; }
+    .zs svg { max-width: 150mm; }
+  }
+</style>
+</head>
+<body>
+<main>
+<section class="cover">
+<p class="kicker">Deutsch · 4. Klasse AHS</p>
+<h1>Lernheft Zeitformen</h1>
+<p class="lede">Alle sechs Zeitformen – im Aktiv und im Passiv. Mit Erklärungen, sechs Übungsblättern, einem Probetest und allen Lösungen.</p>
+<div class="zs" data-zeitstrahl=""></div>
+<p class="meta">So arbeitest du damit: Erst das Kapitel lesen, dann das Übungsblatt <b>ohne</b> nachzuschauen lösen, dann mit den Lösungen hinten vergleichen. Fehler rot anstreichen und die Regel dazuschreiben. Interaktiv üben: <span class="mono">hirogen.github.io/zahlensysteme/deutsch/zeiten</span> (Online-Version dieses Hefts).</p>
+</section>
+
+<section class="chapter">
+<h2>1 · Die sechs Zeitformen erkennen</h2>
+<table class="ueber">
+<tr><th>Zeitform</th><th>Bauplan</th><th>Beispiel</th></tr>
+<tr><td>Präsens</td><td>1 Verbteil</td><td>Er geht nach Hause.</td></tr>
+<tr><td>Präteritum</td><td>1 Verbteil (2. Stammform)</td><td>Er ging nach Hause.</td></tr>
+<tr><td>Perfekt</td><td class="f">haben/sein (Präsens) + Partizip II</td><td>Er ist nach Hause gegangen.</td></tr>
+<tr><td>Plusquamperfekt</td><td class="f">hatte/war + Partizip II</td><td>Er war nach Hause gegangen.</td></tr>
+<tr><td>Futur I</td><td class="f">werden + Infinitiv</td><td>Er wird nach Hause gehen.</td></tr>
+<tr><td>Futur II</td><td class="f">werden + Partizip II + haben/sein</td><td>Er wird nach Hause gegangen sein.</td></tr>
+</table>
+<div class="key"><p><b>Drei Fragen:</b> ① Nur ein Verbteil? → Präsens/Präteritum. ② <i>werden</i> dabei? → Futur I (+ Infinitiv) oder Futur II (+ Partizip II + haben/sein). ③ Sonst haben/sein + Partizip II: Hilfsverb im Präsens → Perfekt, im Präteritum → Plusquamperfekt.</p></div>
+<div class="trap"><p>Verbteile am Satzende nicht übersehen – immer bis zum Punkt lesen!</p></div>
+
+<h2 style="margin-top:2rem">2 · Präsens und Präteritum</h2>
+<p>Stammformen: <b>schwach</b> machen – machte – gemacht · <b>stark</b> finden – fand – gefunden · <b>gemischt</b> denken – dachte – gedacht.</p>
+<table class="konj">
+<tr><th></th><th>Präsens</th><th>Präteritum schwach</th><th>Präteritum stark</th></tr>
+<tr><th>ich</th><td>gehe</td><td>machte</td><td>ging</td></tr><tr><th>du</th><td>gehst</td><td>machtest</td><td>gingst</td></tr>
+<tr><th>er/sie/es</th><td>geht</td><td>machte</td><td>ging</td></tr><tr><th>wir</th><td>gehen</td><td>machten</td><td>gingen</td></tr>
+<tr><th>ihr</th><td>geht</td><td>machtet</td><td>gingt</td></tr><tr><th>sie</th><td>gehen</td><td>machten</td><td>gingen</td></tr>
+</table>
+<ul>
+<li>Vokalwechsel im Präsens: du liest, er fährt, sie nimmt. Verben auf -t/-d: du arbeitest, er findet.</li>
+<li>Trennbare Verben: Vorsilbe ans Ende – Ich stand um sieben Uhr <b>auf</b>.</li>
+<li>Geschriebene Erzählungen → <b>Präteritum</b>. Mündlich sagt man in Österreich fast immer Perfekt.</li>
+</ul>
+</section>
+
+<section class="chapter">
+<h2>3 · Perfekt und Plusquamperfekt</h2>
+<div class="formel">Perfekt = <b>habe/bin</b> (Präsens) + Partizip II · Plusquamperfekt = <b>hatte/war</b> + Partizip II</div>
+<ul>
+<li><b>Partizip II:</b> ge…t (gemacht), ge…en (gefunden). Kein ge- bei -ieren und be-/er-/ver-/ent-/zer-. Trennbar: auf<b>ge</b>standen.</li>
+<li><b>sein</b> bei Bewegung A→B und Veränderung (gehen, fahren, aufstehen) und bei sein, bleiben, werden. Sonst <b>haben</b>.</li>
+<li><span class="at"></span> sitzen, stehen, liegen: in Österreich mit <b>sein</b> (ich bin gesessen) – <i>habe gesessen</i> ist auch richtig.</li>
+<li>Das Partizip II steht am Satzende: Ich habe eine Semmel <b>gegessen</b>.</li>
+</ul>
+
+<h2 style="margin-top:2rem">4 · Futur I und Futur II</h2>
+<div class="formel">Futur I = <b>werden</b> + Infinitiv · Futur II = <b>werden</b> + Partizip II + <b>haben/sein</b></div>
+<table class="ueber">
+<tr><th></th><th>Bedeutung</th><th>Beispiel</th></tr>
+<tr><td>Futur I</td><td>Zukunft</td><td>Morgen wird es regnen.</td></tr>
+<tr><td>Futur I</td><td>Vermutung über jetzt</td><td>Sie wird krank sein.</td></tr>
+<tr><td>Futur II</td><td>in Zukunft abgeschlossen</td><td>Bis Freitag werde ich das Buch gelesen haben.</td></tr>
+<tr><td>Futur II</td><td>Vermutung über Vergangenes</td><td>Er wird den Bus verpasst haben.</td></tr>
+</table>
+<p>Test: Passt „hat wahrscheinlich …“? → Vermutung.</p>
+</section>
+
+<section class="chapter">
+<h2>5 · Was war zuerst? (nachdem)</h2>
+<table class="ueber">
+<tr><th>Hauptsatz (danach)</th><th>nachdem-Satz (vorher)</th><th>Beispiel</th></tr>
+<tr><td>Präteritum</td><td class="f">Plusquamperfekt</td><td>Nachdem Lena gegessen hatte, ging sie ins Freie.</td></tr>
+<tr><td>Präsens / Futur I</td><td class="f">Perfekt</td><td>Nachdem Lena gegessen hat, geht sie ins Freie.</td></tr>
+</table>
+<div class="trap"><p>✗ Nachdem sie die Hausübung machte, ging sie … → ✓ Nachdem sie die Hausübung gemacht <b>hatte</b>, ging sie …</p></div>
+<p>Erzählen: durchgehend Präteritum, Vorgeschichte im Plusquamperfekt, wörtliche Rede wie gesprochen.</p>
+
+<h2 style="margin-top:2rem">6 · Passiv in allen Zeitformen</h2>
+<p><i>Oma bäckt den Kuchen.</i> → <i>Der Kuchen wird (von Oma) gebacken.</i> Akkusativobjekt wird Subjekt, Täter mit <i>von</i> oder weglassen.</p>
+<div id="ptab"></div>
+<div class="trap"><p>Im Passiv immer <b>worden</b>, nie <i>geworden</i>. werden + Infinitiv = Futur I Aktiv; werden + Partizip II = Passiv.</p></div>
+</section>
+
+<h2 class="blatt-h">Übungsblatt 1 · Zeitform erkennen</h2>
+<p class="meta">Schreib die Zeitform dazu. Tipp: Verbteile unterstreichen.</p>
+<ol class="blatt" data-blatt="1" data-seed="111" data-specs='[{"kind":"erkennen","tenses":["praesens"]},{"kind":"erkennen","tenses":["praeteritum"]},{"kind":"erkennen","tenses":["perfekt"]},{"kind":"erkennen","tenses":["plusquamperfekt"]},{"kind":"erkennen","tenses":["futur1"]},{"kind":"erkennen","tenses":["futur2"]},{"kind":"erkennen"}]' data-n="14"></ol>
+
+<h2 class="blatt-h">Übungsblatt 2 · Präsens und Präteritum</h2>
+<ol class="blatt" data-blatt="2" data-seed="222" data-specs='[{"kind":"form","tense":"praeteritum"},{"kind":"form","tense":"praeteritum"},{"kind":"form","tense":"praesens"},{"kind":"bilden","to":["praeteritum"],"from":"praesens"}]' data-n="14"></ol>
+
+<h2 class="blatt-h">Übungsblatt 3 · Perfekt und Plusquamperfekt</h2>
+<ol class="blatt" data-blatt="3" data-seed="333" data-specs='[{"kind":"hilfsverb"},{"kind":"perfektForm"},{"kind":"bilden","to":["perfekt"],"from":"praesens"},{"kind":"bilden","to":["plusquamperfekt"],"from":"praeteritum"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Übungsblatt 4 · Futur I und Futur II</h2>
+<ol class="blatt" data-blatt="4" data-seed="444" data-specs='[{"kind":"bilden","to":["futur1"]},{"kind":"bilden","to":["futur2"]},{"kind":"futur2Sinn"}]' data-n="10"></ol>
+
+<h2 class="blatt-h">Übungsblatt 5 · nachdem</h2>
+<ol class="blatt" data-blatt="5" data-seed="555" data-specs='[{"kind":"nachdem","typed":true}]' data-n="8"></ol>
+
+<h2 class="blatt-h">Übungsblatt 6 · Passiv</h2>
+<ol class="blatt" data-blatt="6" data-seed="666" data-specs='[{"kind":"aktivPassiv"},{"kind":"passivBilden"},{"kind":"passivBilden"},{"kind":"passivErkennen"}]' data-n="14"></ol>
+
+<h2 class="blatt-h">Probetest · alles gemischt <span class="meta">(25 Minuten, ohne Hilfe)</span></h2>
+<ol class="blatt" data-blatt="T" data-seed="777" data-fixed="1" data-specs='[{"kind":"erkennen"},{"kind":"erkennen"},{"kind":"form","tense":"praeteritum"},{"kind":"form","tense":"praeteritum"},{"kind":"hilfsverb"},{"kind":"perfektForm"},{"kind":"bilden","to":["perfekt"]},{"kind":"bilden","to":["plusquamperfekt"]},{"kind":"bilden","to":["futur1"]},{"kind":"bilden","to":["futur2"]},{"kind":"futur2Sinn"},{"kind":"nachdem","typed":true},{"kind":"aktivPassiv"},{"kind":"passivBilden"},{"kind":"passivErkennen"},{"kind":"nachdem"}]'></ol>
+<p class="meta">Punkte: jede Aufgabe 1 Punkt. 15–16 sehr gut · 13–14 gut · 11–12 befriedigend · 8–10 genügend (geschätzt).</p>
+
+<h2 class="blatt-h">Lösungen</h2>
+<div id="loesungen"></div>
+</main>
+<script src="../assets/zeiten.js"></script>
+<script src="../assets/zeiten-uebung.js"></script>
+<script>
+(function () {
+  const Z = Zeiten;
+  ZeitenUebung.tabelle(document.getElementById('ptab'), 'backen', 'passiv');
+  const strip = h => h.replace(/<span class="hint">.*?<\/span>/g, '');
+  let loes = '';
+  document.querySelectorAll('ol.blatt').forEach(ol => {
+    const r = Z.rng(+ol.dataset.seed), specs = JSON.parse(ol.dataset.specs);
+    const n = ol.dataset.fixed ? specs.length : +ol.dataset.n;
+    const seen = new Set(); const tasks = [];
+    let guard = 0;
+    while (tasks.length < n && guard++ < 500) {
+      const t = Z.make(specs[ol.dataset.fixed ? tasks.length : tasks.length % specs.length], r);
+      if (seen.has(t.prompt)) continue; seen.add(t.prompt); tasks.push(t);
+    }
+    if (!ol.dataset.fixed) for (let i = tasks.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [tasks[i], tasks[j]] = [tasks[j], tasks[i]]; }
+    ol.innerHTML = tasks.map(t => {
+      let a;
+      if (t.kind === 'erkennen' || t.kind === 'passivErkennen') a = '<span class="line short"></span>';
+      else if (t.choices) a = '<div class="opts">' + t.choices.map(c => '<span>☐ ' + c + '</span>').join('') + '</div>';
+      else a = '<span class="line' + (t.full ? '' : ' short') + '"></span>';
+      return '<li>' + strip(t.prompt) + a + '</li>';
+    }).join('');
+    loes += '<h3>' + (ol.dataset.blatt === 'T' ? 'Probetest' : 'Übungsblatt ' + ol.dataset.blatt) + '</h3><ol class="loes">' +
+      tasks.map(t => '<li><b>' + t.show + '</b>' + (t.answers.length > 1 && t.full ? ' <span class="muted">(auch: ' + t.answers.slice(1).join(' / ') + ')</span>' : '') + '</li>').join('') + '</ol>';
+  });
+  document.getElementById('loesungen').innerHTML = loes;
+})();
+</script>
+</body>
+</html>

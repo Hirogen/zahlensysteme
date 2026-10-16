@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch: Zeitformen</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<link rel="stylesheet" href="assets/zeiten.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../../index.html">Lernseiten</a> › Deutsch</p>
+<p class="kicker">Deutsch · 4. Klasse AHS</p>
+<h1>Alle Zeitformen sicher können</h1>
+<p class="lede">Sieben kurze Lektionen mit Sofort-Feedback, ein Spickzettel und ein Lernheft zum Ausdrucken. Ziel: jede Zeitform erkennen und bilden, im Aktiv und im Passiv, und in Erzählungen richtig verwenden.</p>
+
+<div class="zs" data-zeitstrahl=""></div>
+
+<div class="key"><p><b>Die ganze Sache in drei Sätzen:</b> Präsens und Präteritum haben <b>einen</b> Verbteil. Perfekt und Plusquamperfekt sind <b>haben/sein + Partizip II</b>, Futur ist <b>werden + …</b>. Im Passiv kommt <b>werden + Partizip II</b> dazu, in den Perfekt-Zeiten mit <b>worden</b>.</p></div>
+
+<h2>Lektionen</h2>
+<p class="muted" style="font-family:var(--sans);font-size:.95rem">Pro Tag eine Lektion (15–20 Minuten) bringt mehr als alles an einem Abend. Am Anfang jeder Lektion kommt eine kurze Wiederholung der vorigen.</p>
+<div class="cards" id="cards">
+<a class="card" href="lessons/0001-sechs-zeitformen-erkennen.html" data-k="L1"><div class="when">Tag 1</div><div class="t">1 · Die sechs Zeitformen erkennen</div><div class="d">Der Bauplan jeder Zeitform und drei Fragen, mit denen du nie mehr raten musst.</div></a>
+<a class="card" href="lessons/0002-praesens-praeteritum.html" data-k="L2"><div class="when">Tag 2</div><div class="t">2 · Präsens &amp; Präteritum</div><div class="d">Stammformen, starke und schwache Verben – und warum man in Erzählungen Präteritum schreibt.</div></a>
+<a class="card" href="lessons/0003-perfekt-plusquamperfekt.html" data-k="L3"><div class="when">Tag 3</div><div class="t">3 · Perfekt &amp; Plusquamperfekt</div><div class="d">haben oder sein? Inklusive Österreich-Regel: „ich bin gesessen“.</div></a>
+<a class="card" href="lessons/0004-futur.html" data-k="L4"><div class="when">Tag 4</div><div class="t">4 · Futur I &amp; Futur II</div><div class="d">werden + … – und warum das Futur II meistens eine Vermutung ist.</div></a>
+<a class="card" href="lessons/0005-zeitenfolge-nachdem.html" data-k="L5"><div class="when">Tag 5</div><div class="t">5 · Was war zuerst? (nachdem)</div><div class="d">Zeitformen kombinieren – der häufigste Fehler in Erzählungen.</div></a>
+<a class="card" href="lessons/0006-passiv.html" data-k="L6"><div class="when">Tag 6</div><div class="t">6 · Passiv in allen sechs Zeiten</div><div class="d">wird gebacken · ist gebacken worden · wird gebacken worden sein.</div></a>
+<a class="card" href="lessons/0007-generalprobe.html" data-k="L7"><div class="when">Tag 7 und vor der Schularbeit</div><div class="t">7 · Generalprobe</div><div class="d">16 gemischte Aufgaben, Feedback erst am Ende, Note geschätzt. Plus Endlos-Training.</div></a>
+</div>
+
+<h2>Zum Ausdrucken</h2>
+<div class="cards">
+<a class="card" href="reference/spickzettel.pdf"><div class="t">Spickzettel (PDF)</div><div class="d">Alle Baupläne, haben/sein, nachdem-Regel und Stammformen-Liste auf zwei Seiten.</div></a>
+<a class="card" href="reference/lernheft.pdf"><div class="t">Lernheft (PDF)</div><div class="d">Erklärungen, sechs Übungsblätter, Probetest und Lösungen – zum Üben auf Papier.</div></a>
+</div>
+<p class="hint">Auch als HTML: <a href="reference/spickzettel.html">Spickzettel</a> · <a href="reference/lernheft.html">Lernheft</a>.</p>
+
+<div class="ask">💬 <b>Für Eltern:</b> Die Lektionen zählen alle Formen als richtig, die in Österreich gelten (z. B. <i>bin gesessen</i> und <i>habe gesessen</i>). Wenn eure Lehrkraft andere Schwerpunkte setzt (z. B. Konjunktiv oder indirekte Rede), einfach Claude fragen – das lässt sich ergänzen.</div>
+</main>
+<script src="assets/zeiten.js"></script>
+<script src="assets/zeiten-uebung.js"></script>
+<script>
+document.querySelectorAll('#cards .card').forEach(c => {
+  const s = ZeitenUebung.store.get(c.dataset.k);
+  if (s) c.querySelector('.d').insertAdjacentHTML('beforeend', ' <b style="color:var(--ok)">· zuletzt ' + s.pct + ' %</b>');
+});
+</script>
+</body>
+</html>

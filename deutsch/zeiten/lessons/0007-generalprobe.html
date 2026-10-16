@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generalprobe Zeitformen</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/zeiten.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zeitformen</a> › Lektion 7</p>
+<p class="kicker">Lektion 7 · 25 Minuten</p>
+<h1>Generalprobe: alles gemischt</h1>
+<p class="lede">Bei der Schularbeit kommt nicht alles schön nach Lektionen sortiert. Hier ist alles durcheinander – genau das trainiert dein Gedächtnis am besten. Erst nach dem Abgeben siehst du, was richtig war.</p>
+
+<div class="key"><p><b>Vorher kurz wiederholen (1 Minute, ohne nachzuschauen):</b> Kannst du den Bauplan aller sechs Zeitformen aufsagen? Wenn nicht: <a href="../reference/spickzettel.html">Spickzettel</a> ansehen, weglegen, nochmal versuchen.</p></div>
+
+<div id="test"></div>
+
+<h2>Endlos-Training</h2>
+<p>Wenn du nach dem Probetest weiterüben willst: hier kommen immer neue gemischte Aufgaben.</p>
+<div id="mix"></div>
+
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Ich habe beim Futur II immer Fehler, gib mir 5 extra Sätze.“</div>
+
+<div class="nav"><a href="0006-passiv.html">← Lektion 6</a><a href="../index.html">Übersicht →</a></div>
+</main>
+<script src="../assets/zeiten.js"></script>
+<script src="../assets/zeiten-uebung.js"></script>
+<script>
+ZeitenUebung.test(document.getElementById('test'), {
+  title: 'Probetest Zeitformen', storeKey: 'L7', minutes: 25,
+  specs: [{ kind: 'erkennen' }, { kind: 'erkennen' }, { kind: 'form', tense: 'praeteritum' }, { kind: 'form', tense: 'praeteritum' },
+          { kind: 'hilfsverb' }, { kind: 'perfektForm' }, { kind: 'bilden', to: ['perfekt'] }, { kind: 'bilden', to: ['plusquamperfekt'] },
+          { kind: 'bilden', to: ['futur1'] }, { kind: 'bilden', to: ['futur2'] }, { kind: 'futur2Sinn' }, { kind: 'nachdem' },
+          { kind: 'nachdem', typed: true }, { kind: 'aktivPassiv' }, { kind: 'passivBilden' }, { kind: 'passivErkennen' }]
+});
+ZeitenUebung.mount(document.getElementById('mix'), {
+  title: 'Gemischt', storeKey: 'MIX', count: 15,
+  specs: ['erkennen', 'form', 'hilfsverb', 'perfektForm', 'bilden', 'futur2Sinn', 'nachdem', 'aktivPassiv', 'passivBilden', 'passivErkennen'].map(k => ({ kind: k }))
+});
+</script>
+</body>
+</html>

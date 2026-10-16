@@ -1,0 +1,26 @@
+/* Ergänzung zu ../../assets/style.css – nur was die Zeitformen-Seiten zusätzlich brauchen. */
+.gap { display: inline-block; min-width: 3.5em; border-bottom: 2px solid var(--accent); color: transparent; line-height: 1; }
+.ueb-q i { font-style: normal; font-family: var(--serif); font-size: 1.1em; display: inline-block; margin-top: .3rem; }
+.umlaut { display: flex; gap: .35rem; margin-top: .5rem; }
+.umlaut button { min-width: 2.4rem; padding: .3rem .6rem; font-size: 1rem; }
+input.txt { font-family: var(--sans); }
+
+/* Formel-Zeilen: "haben/sein + Partizip II" */
+.formel { font: 1rem/1.5 var(--sans); background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: .7rem 1rem; margin: .8rem 0; }
+.formel b { color: var(--accent); }
+.bsp { font-style: italic; }
+.bsp b, .bsp mark { font-style: normal; }
+mark { background: var(--accent-soft); color: inherit; padding: 0 .15em; border-radius: 3px; }
+.zs { margin: 1rem 0; overflow-x: auto; }
+
+/* Übersichtstabellen */
+table.konj, table.ueber { font: .88rem/1.35 var(--sans); border-collapse: collapse; margin: .6rem 0; }
+table.konj th, table.konj td, table.ueber th, table.ueber td { padding: .35rem .6rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.konj th, table.ueber th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+table.konj td { white-space: nowrap; }
+table.ueber td:first-child { font-weight: 700; white-space: nowrap; }
+table.ueber td.f { color: var(--accent); font-weight: 600; }
+.stamm { columns: 2 13rem; column-gap: 2rem; font: .9rem/1.6 var(--sans); padding: 0; list-style: none; }
+.stamm li { break-inside: avoid; }
+.at { display: inline-block; font: 700 .68rem var(--sans); letter-spacing: .06em; color: #fff; background: #c8102e; border-radius: 3px; padding: .05rem .3rem; vertical-align: .12em; }
+.at::before { content: "AT"; }

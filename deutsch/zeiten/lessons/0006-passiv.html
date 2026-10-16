@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passiv in allen Zeiten</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/zeiten.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Zeitformen</a> › Lektion 6</p>
+<p class="kicker">Lektion 6 · ca. 20 Minuten</p>
+<h1>Das Passiv in allen sechs Zeitformen</h1>
+<p class="lede">Im Passiv ist wichtig, <b>was passiert</b>, nicht wer es tut. Die sechs Zeitformen gibt es auch hier. Du brauchst nur zwei neue Bausteine: <b>werden + Partizip II</b> und, in den Perfekt-Zeiten, <b>worden</b>.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen aus Lektion 5: <i>Nachdem wir das Buch ___ (lesen), sahen wir den Film.</i> <span class="muted">(erst überlegen, dann klicken)</span></summary><p>Hauptsatz Präteritum → Plusquamperfekt: <i>gelesen <b>hatten</b></i>.</p></details>
+
+<h2>Aktiv → Passiv</h2>
+<p><i>Oma <b>bäckt</b> den Kuchen.</i> → <i>Der Kuchen <b>wird</b> (von Oma) <b>gebacken</b>.</i></p>
+<ol>
+<li>Das Akkusativobjekt (<i>den Kuchen</i>) wird zum Subjekt (<i>der Kuchen</i>).</li>
+<li>Wer es tut, kommt mit <b>von</b> dazu – oder fällt ganz weg.</li>
+<li>Das Verb wird zu <b>werden + Partizip II</b> – in der richtigen Zeitform.</li>
+</ol>
+
+<h2>Alle Zeitformen</h2>
+<div id="tab"></div>
+<div class="key"><p><b>So merkst du es dir:</b> Das Passiv ist einfach <i>werden</i> + Partizip II. Du setzt nur <i>werden</i> in die gewünschte Zeitform – genau wie ein normales Verb: <i>wird → wurde → ist geworden → war geworden → wird werden → wird geworden sein</i>. Einziger Trick: Im Passiv verliert <i>geworden</i> sein <i>ge-</i> → <b>worden</b>.</p></div>
+
+<div class="trap"><p>✗ <i>Der Kuchen ist gebacken <b>geworden</b>.</i> ✓ <i>Der Kuchen ist gebacken <b>worden</b>.</i> – Im Passiv immer <b>worden</b>.</p></div>
+<div class="trap"><p>Futur I Aktiv oder Passiv Präsens? Schau auf das zweite Verb: <i>Oma <b>wird</b> den Kuchen <b>backen</b></i> (Infinitiv → Futur I Aktiv). <i>Der Kuchen <b>wird gebacken</b></i> (Partizip II → Passiv Präsens).</p></div>
+
+<h2>Jetzt du</h2>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Üben auf Papier</b>Die Landesakademie Baden-Württemberg hat Arbeitsblätter, in denen ein Verb durch alle Zeitformen im Aktiv und Passiv konjugiert wird: <a href="https://www.lehrerfortbildung-bw.de/u_sprachlit/deutsch/bs/bej/grammatik/aktiv_passiv/gram_passiv_ueb_c.pdf">Arbeitsblatt (alle Zeitformen)</a> mit Lösungen, z. B. für <a href="https://www.lehrerfortbildung-bw.de/u_sprachlit/deutsch/bs/bej/grammatik/aktiv_passiv/gram_passiv_ueb_b_loesg_loben.pdf"><i>loben</i></a>.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Warum kann man <i>schlafen</i> nicht ins Passiv setzen?“</div>
+
+<div class="nav"><a href="0005-zeitenfolge-nachdem.html">← Lektion 5</a><a href="0007-generalprobe.html">Lektion 7: Generalprobe →</a></div>
+</main>
+<script src="../assets/zeiten.js"></script>
+<script src="../assets/zeiten-uebung.js"></script>
+<script>
+ZeitenUebung.tabelle(document.getElementById('tab'), 'backen', 'passiv');
+ZeitenUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Passiv', storeKey: 'L6', count: 12,
+  specs: [{ kind: 'aktivPassiv' }, { kind: 'aktivPassiv' }, { kind: 'passivBilden' }, { kind: 'passivBilden' }, { kind: 'passivBilden' },
+          { kind: 'passivErkennen' }, { kind: 'erkennen' }]
+});
+</script>
+</body>
+</html>
