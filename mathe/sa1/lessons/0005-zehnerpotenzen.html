@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rechnen mit Zehnerpotenzen</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe SA 1</a> › Lektion 5</p>
+<p class="kicker">Lektion 5 · Skript 1.2 · ca. 20 Minuten</p>
+<h1>Zehnerpotenzen: Nullen zählen statt rechnen</h1>
+<p class="lede">Die 2. Hausübung bestand nur aus solchen Brüchen. Das Rezept hat zwei Schritte, und der Lehrer hat sie ins Skript geschrieben: <b>1. alles als 10er-Potenz, 2. Potenzrechenregeln.</b></p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen aus Lektion 4: <span class="n">10<sup>−2</sup> = ?</span> als Bruch und als Dezimalzahl</summary><p><span class="n">10<sup>−2</sup> = <sup>1</sup>⁄<sub>10²</sub> = <sup>1</sup>⁄<sub>100</sub> = 0,01</span>. Falls nicht: <a href="0004-negative-exponenten-wurzeln.html">Lektion 4</a>.</p></details>
+
+<h2>Exponent = Anzahl der Stellen</h2>
+<div class="scroll"><table class="ueber">
+<tr><th>positiv</th><th></th><th>negativ</th><th></th></tr>
+<tr><td>10<sup>1</sup></td><td>10</td><td>10<sup>−1</sup></td><td>0,1</td></tr>
+<tr><td>10<sup>2</sup></td><td>100</td><td>10<sup>−2</sup></td><td>0,01</td></tr>
+<tr><td>10<sup>3</sup></td><td>1000</td><td>10<sup>−3</sup></td><td>0,001</td></tr>
+<tr><td>10<sup>6</sup></td><td>1 000 000</td><td>10<sup>−6</sup></td><td>0,000 001</td></tr>
+<tr><td>10<sup>14</sup></td><td>1 mit 14 Nullen</td><td>10<sup>−15</sup></td><td>1 an der 15. Stelle nach dem Komma</td></tr>
+</table></div>
+<div class="key"><p><b>Positiver Exponent</b> = Anzahl der Nullen hinter der 1. <b>Negativer Exponent</b> = an welcher Stelle nach dem Komma die 1 steht. Also: 0,001 hat die 1 an der 3. Stelle → 10<sup>−3</sup>.</p></div>
+
+<h2>Das Rezept</h2>
+<div class="stepper">
+<h3>Beispiel aus dem Skript</h3>
+<div class="ausdruck">(<span class="frac"><span>0,001<sup>−4</sup> · 100 000</span><span>1000<sup>−3</sup> · 0,0001</span></span>)<sup>4</sup></div>
+<div class="step"><div class="rw"><div>= (<span class="frac"><span>(10<sup>−3</sup>)<sup>−4</sup> · 10<sup>5</sup></span><span>(10<sup>3</sup>)<sup>−3</sup> · 10<sup>−4</sup></span></span>)<sup>4</sup><span class="note">1. alles als 10er-Potenz</span></div></div></div>
+<div class="step"><div class="rw"><div>= (<span class="frac"><span>10<sup>12</sup> · 10<sup>5</sup></span><span>10<sup>−9</sup> · 10<sup>−4</sup></span></span>)<sup>4</sup><span class="note">2. Potenz potenzieren: multiplizieren</span></div></div></div>
+<div class="step"><div class="rw"><div>= (<span class="frac"><span>10<sup>17</sup></span><span>10<sup>−13</sup></span></span>)<sup>4</sup><span class="note">multiplizieren: addieren</span></div></div></div>
+<div class="step"><div class="rw"><div>= (10<sup>30</sup>)<sup>4</sup><span class="note">dividieren: 17 − (−13) = 30</span></div></div></div>
+<div class="step"><div class="rw"><div>= <b>10<sup>120</sup></b></div></div></div>
+</div>
+<div class="trap"><p>Beim Dividieren mit negativem Nenner-Exponent: <b>minus minus = plus</b>. 17 − (−13) = 30, nicht 4. Schreib die Klammer immer hin.</p></div>
+<div class="trap"><p><span class="n"><sup>1</sup>⁄<sub>0,000 001</sub></span> ist <span class="n"><sup>1</sup>⁄<sub>10<sup>−6</sup></sub> = 10<sup>6</sup></span>. Ein Bruch mit 1 oben: Kehrwert = Vorzeichen des Exponenten umdrehen.</p></div>
+
+<h2>Jetzt du</h2>
+<p>Ergebnis als Zehnerpotenz eintippen: <span class="mono">10^-3</span> oder <span class="mono">10^120</span>. Unter dem Feld siehst du, wie das Programm es liest.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b>Österreichisches Übungsblatt mit Lösungen: <a href="https://www.mathe-lexikon.at/media/worksheets/Zehnerpotenzen_-_Arbeitsblatt.pdf">mathe-lexikon.at – Zehnerpotenzen</a> (<a href="https://www.mathe-lexikon.at/media/worksheets/Zehnerpotenzen_-_Loesungen.pdf">Lösungen</a>). Dein Skript S. 9–11 und die 2. HÜ auf S. 13 – die drei HÜ-Aufgaben nochmal ohne Hilfe rechnen!</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Rechne mir die 3. Aufgabe der 2. HÜ Schritt für Schritt vor.“</div>
+
+<div class="nav"><a href="0004-negative-exponenten-wurzeln.html">← Lektion 4</a><a href="0006-gleitkomma.html">Lektion 6: Gleitkommadarstellung →</a></div>
+</main>
+<script src="../assets/mathe.js"></script>
+<script src="../assets/mathe-uebung.js"></script>
+<script>
+MatheUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Zehnerpotenzen', storeKey: 'L5', count: 12,
+  specs: [{ kind: 'zehnerWert' }, { kind: 'zehnerWert' }, { kind: 'zehner', lvl: 1 }, { kind: 'zehner', lvl: 2 }, { kind: 'zehner', lvl: 2 }, { kind: 'zehner', lvl: 3 }, { kind: 'zehner', lvl: 3 }, { kind: 'potWert' }]
+});
+</script>
+</body>
+</html>

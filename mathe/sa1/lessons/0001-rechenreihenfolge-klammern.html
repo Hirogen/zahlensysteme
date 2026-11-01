@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rechenreihenfolge und Klammern</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe SA 1</a> › Lektion 1</p>
+<p class="kicker">Lektion 1 · Skript 1.1 · ca. 25 Minuten</p>
+<h1>Rechenreihenfolge, Klammern und das Minus vor der Potenz</h1>
+<p class="lede">Lange Ausdrücke wie in der 1. Hausübung sehen schlimm aus – sind aber immer dieselben drei Regeln. Und eine Falle, die der Lehrer im Skript extra eingekreist hat.</p>
+
+<h2>Drei Stufen</h2>
+<div class="stufen">
+<div><b>3. Stufe</b><span>Potenzieren <span class="n">2<sup>3</sup></span> und Wurzelziehen <span class="n">√9</span></span></div>
+<div><b>2. Stufe</b><span>Multiplizieren · und Dividieren :  („Punkt“)</span></div>
+<div><b>1. Stufe</b><span>Addieren + und Subtrahieren −  („Strich“)</span></div>
+</div>
+<div class="key"><p><b>Regel:</b> Höhere Stufe immer vor niedrigerer Stufe – also <b>Potenz vor Punkt vor Strich</b>. Gleiche Stufe: von links nach rechts. <b>Klammern</b> schützen ihren Inhalt: die <b>innerste Klammer zuerst</b>.</p></div>
+<p>Ob die Klammer rund, eckig oder geschwungen ist, ist mathematisch egal – <span class="n">( ) [ ] { }</span> helfen nur beim Lesen. Man nimmt innen rund, außen eckig, ganz außen geschwungen.</p>
+
+<div class="stepper">
+<h3>Beispiel aus dem Skript</h3>
+<div class="ausdruck">(8 · 9 + 7) · 11 − 6 · (5 + 72 : 6)</div>
+<div class="step"><div class="rw"><div>= (72 + 7) · 11 − 6 · (5 + 12)<span class="note">in den Klammern: Punkt vor Strich</span></div></div></div>
+<div class="step"><div class="rw"><div>= 79 · 11 − 6 · 17<span class="note">Klammern fertig</span></div></div></div>
+<div class="step"><div class="rw"><div>= 869 − 102<span class="note">Punkt vor Strich</span></div></div></div>
+<div class="step"><div class="rw"><div>= <b>767</b></div></div></div>
+</div>
+
+<h2>Die Falle: Potenz kommt vor dem Minus</h2>
+<p>Ein Minus vor einer Zahl ist eigentlich „minus 1 mal“, also Strich- bzw. Punktrechnung. Die Potenz ist 3. Stufe – sie kommt <b>zuerst</b>.</p>
+<div class="regeln">
+<div><span class="n">−2<sup>2</sup> = −(2·2) = <b>−4</b></span><small>Das Minus wird nicht mitpotenziert.</small></div>
+<div><span class="n">(−2)<sup>2</sup> = (−2)·(−2) = <b>+4</b></span><small>Die Klammer gehört zur Basis.</small></div>
+<div><span class="n">(−2)<sup>3</sup> = <b>−8</b></span><small>Ungerader Exponent → bleibt negativ.</small></div>
+</div>
+<div class="trap"><p><span class="n">−2<sup>2</sup> · 3 − (−2)<sup>2</sup> · 3 = −4·3 − 4·3 = −24</span>. Wer bei −2² „+4“ rechnet, bekommt 0 – und verliert den ganzen Punkt.</p></div>
+
+<div class="stepper">
+<h3>Klammern in Klammern (wie im Skript)</h3>
+<div class="ausdruck">((−1 − 2)<sup>3</sup> : (11 − 2)) · [(3 − 5) − (−3 · 4 − 2)]</div>
+<div class="step"><div class="rw"><div>= ((−3)<sup>3</sup> : 9) · [−2 − (−12 − 2)]<span class="note">innerste Klammern</span></div></div></div>
+<div class="step"><div class="rw"><div>= (−27 : 9) · [−2 − (−14)]<span class="note">Potenz; nächste Klammer</span></div></div></div>
+<div class="step"><div class="rw"><div>= −3 · 12<span class="note">−2 − (−14) = −2 + 14 = 12</span></div></div></div>
+<div class="step"><div class="rw"><div>= <b>−36</b></div></div></div>
+</div>
+<p class="hint">Tipp für die SA: Schreib jede Zeile komplett neu ab und rechne pro Zeile nur <b>einen</b> Schritt. Das dauert länger, aber Fehler fallen sofort auf.</p>
+
+<h2>Jetzt du</h2>
+<p>Erst die Vorzeichen-Falle, dann längere Ausdrücke. Rechne auf Papier und tipp nur das Ergebnis ein. Bei Fehlern siehst du den kompletten Rechenweg.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b>Dein Skript S. 1–2 (Schulübung 1 und 2). Mehr Aufgaben zum Üben: die Hausübung 113, 136 und 137 aus dem Buch – jetzt nochmal ohne Lösung rechnen und mit der Probe-SA vergleichen.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Warum ist −(−3)² nicht 9?“ oder „Gib mir 5 Aufgaben wie HÜ 137.“</div>
+
+<div class="nav"><a href="../index.html">← Übersicht</a><a href="0002-rechengesetze-begriffe.html">Lektion 2: Rechengesetze &amp; Begriffe →</a></div>
+</main>
+<script src="../assets/mathe.js"></script>
+<script src="../assets/mathe-uebung.js"></script>
+<script>
+MatheUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Reihenfolge und Vorzeichen', storeKey: 'L1', count: 10,
+  specs: [{ kind: 'vorzeichen' }, { kind: 'vorzeichen' }, { kind: 'reihenfolge', lvl: 1 }, { kind: 'reihenfolge', lvl: 2 }, { kind: 'reihenfolge', lvl: 2 }, { kind: 'reihenfolge', lvl: 3 }]
+});
+</script>
+</body>
+</html>

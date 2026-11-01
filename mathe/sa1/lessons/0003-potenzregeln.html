@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potenzregeln</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe SA 1</a> › Lektion 3</p>
+<p class="kicker">Lektion 3 · Skript 1.2 · ca. 25 Minuten</p>
+<h1>Potenzregeln: Exponenten addieren, subtrahieren, multiplizieren</h1>
+<p class="lede">Alle Potenzregeln folgen aus einem einzigen Gedanken: Eine Potenz ist eine abgekürzte Multiplikation. Wer das im Kopf hat, muss die Regeln nicht auswendig lernen – man kann sie jederzeit nachzählen.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen aus Lektion 2: Wie heißen die drei Teile von <span class="n">3<sup>4</sup> = 81</span>?</summary><p>3 = <b>Basis</b>, 4 = <b>Exponent</b>, 81 = <b>Potenz</b>. Falls nicht: <a href="0002-rechengesetze-begriffe.html">Lektion 2</a>.</p></details>
+
+<h2>Was eine Potenz ist</h2>
+<div class="formel">3<sup>4</sup> = 3 · 3 · 3 · 3 = 81 &nbsp;&nbsp;<span class="muted" style="font-size:.85rem;font-family:var(--sans)">4-mal der Faktor 3</span></div>
+<div class="regeln">
+<div><i>a</i><sup>1</sup> = <i>a</i><small>einmal der Faktor <i>a</i></small></div>
+<div><i>a</i><sup>0</sup> = 1<small><i>x</i> · <i>a</i><sup>0</sup>: <i>x</i> wird gar nicht mit <i>a</i> multipliziert → bleibt <i>x</i>. Man nimmt auch 0<sup>0</sup> = 1.</small></div>
+</div>
+
+<h2>Die Regeln – nachgezählt</h2>
+<div class="stepper">
+<h3>Multiplizieren bei gleicher Basis</h3>
+<div class="ausdruck"><i>x</i><sup>2</sup> · <i>x</i><sup>4</sup> = (<i>x</i>·<i>x</i>) · (<i>x</i>·<i>x</i>·<i>x</i>·<i>x</i>)</div>
+<div class="step"><div class="rw"><div>= <i>x</i>·<i>x</i>·<i>x</i>·<i>x</i>·<i>x</i>·<i>x</i> = <i>x</i><sup>6</sup> = <i>x</i><sup>2+4</sup><span class="note">2 Stück + 4 Stück = 6 Stück</span></div></div></div>
+</div>
+<div class="stepper">
+<h3>Dividieren bei gleicher Basis</h3>
+<div class="ausdruck"><span class="frac"><span><i>x</i><sup>6</sup></span><span><i>x</i><sup>4</sup></span></span> = <span class="frac"><span><i>x</i>·<i>x</i>·<i>x</i>·<i>x</i>·<i>x</i>·<i>x</i></span><span><i>x</i>·<i>x</i>·<i>x</i>·<i>x</i></span></span></div>
+<div class="step"><div class="rw"><div>= <i>x</i>·<i>x</i> = <i>x</i><sup>2</sup> = <i>x</i><sup>6−4</sup><span class="note">4 Stück kürzen sich weg</span></div></div></div>
+</div>
+<div class="stepper">
+<h3>Potenz potenzieren</h3>
+<div class="ausdruck">(<i>x</i><sup>2</sup>)<sup>3</sup> = <i>x</i><sup>2</sup> · <i>x</i><sup>2</sup> · <i>x</i><sup>2</sup></div>
+<div class="step"><div class="rw"><div>= <i>x</i><sup>2+2+2</sup> = <i>x</i><sup>6</sup> = <i>x</i><sup>2·3</sup><span class="note">3-mal 2 Stück</span></div></div></div>
+</div>
+
+<div class="regeln">
+<div><i>x</i><sup><i>a</i></sup> · <i>x</i><sup><i>b</i></sup> = <i>x</i><sup><i>a</i>+<i>b</i></sup><small>Multiplizieren → Exponenten <b>addieren</b> (selbe Basis!)</small></div>
+<div><span class="frac"><span><i>x</i><sup><i>a</i></sup></span><span><i>x</i><sup><i>b</i></sup></span></span> = <i>x</i><sup><i>a</i>−<i>b</i></sup><small>Dividieren → Exponenten <b>subtrahieren</b> (selbe Basis ≠ 0!)</small></div>
+<div>(<i>x</i><sup><i>a</i></sup>)<sup><i>b</i></sup> = <i>x</i><sup><i>a</i>·<i>b</i></sup><small>Potenz potenzieren → Exponenten <b>multiplizieren</b></small></div>
+<div>(<i>a</i>·<i>b</i>)<sup><i>n</i></sup> = <i>a</i><sup><i>n</i></sup>·<i>b</i><sup><i>n</i></sup><br>(<span class="frac"><span><i>x</i></span><span><i>y</i></span></span>)<sup><i>n</i></sup> = <span class="frac"><span><i>x</i><sup><i>n</i></sup></span><span><i>y</i><sup><i>n</i></sup></span></span><small>Jeder Faktor wird potenziert</small></div>
+</div>
+
+<h3>Mehrere Basen: sortieren, dann zusammenfassen</h3>
+<div class="rw">
+<div><span class="frac"><span><i>x</i><sup>8</sup>·<i>y</i><sup>70</sup>·<i>a</i><sup>15</sup></span><span><i>x</i><sup>6</sup>·<i>a</i><sup>12</sup>·<i>y</i><sup>60</sup></span></span> = <span class="frac"><span><i>a</i><sup>15</sup></span><span><i>a</i><sup>12</sup></span></span> · <span class="frac"><span><i>x</i><sup>8</sup></span><span><i>x</i><sup>6</sup></span></span> · <span class="frac"><span><i>y</i><sup>70</sup></span><span><i>y</i><sup>60</sup></span></span> = <b><i>a</i><sup>3</sup>·<i>x</i><sup>2</sup>·<i>y</i><sup>10</sup></b><span class="note">Beispiel aus dem Skript</span></div>
+</div>
+
+<div class="trap"><p>Potenzen sind <b>weder kommutativ noch assoziativ</b>: 2<sup>3</sup> = 8, aber 3<sup>2</sup> = 9. Und (2<sup>2</sup>)<sup>3</sup> = 2<sup>6</sup> = 64, aber 2<sup>(2<sup>3</sup>)</sup> = 2<sup>8</sup> = 256. Ohne Klammer bedeutet 2<sup>3<sup>2</sup></sup> immer 2<sup>(3<sup>2</sup>)</sup>.</p></div>
+<div class="trap"><p><i>x</i><sup>2</sup> · <i>x</i><sup>4</sup> ist <b>nicht</b> <i>x</i><sup>8</sup>. Multiplizieren → addieren. Nur bei (<i>x</i><sup>2</sup>)<sup>4</sup> wird multipliziert.</p></div>
+
+<h2>Jetzt du</h2>
+<p><b>So tippst du Potenzen:</b> <span class="mono">x^5</span> für <i>x</i><sup>5</sup>, <span class="mono">x^-2</span> für <i>x</i><sup>−2</sup>, mehrere Basen mit <span class="mono">·</span> oder einfach hintereinander: <span class="mono">a^3x^2y^10</span>. Unter dem Feld siehst du, wie das Programm deine Eingabe liest. (Negative Exponenten kommen in Lektion 4 genauer – hier darfst du sie einfach als Ergebnis hinschreiben.)</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://mathe-online.univie.ac.at/skripten/zahlen/zahlen_potenzen.pdf">Uni Wien, mathe online: Skriptum „Zahlen und Potenzen“</a> – die Regeln mit Begründung. Kürzer: <a href="https://de.wikibooks.org/wiki/Mathematikunterricht/_Potenzen">Wikibooks: Potenzen</a>. Dein Skript S. 5–7.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Warum ist a⁰ = 1? Das versteh ich nicht.“</div>
+
+<div class="nav"><a href="0002-rechengesetze-begriffe.html">← Lektion 2</a><a href="0004-negative-exponenten-wurzeln.html">Lektion 4: Negative Exponenten &amp; Wurzeln →</a></div>
+</main>
+<script src="../assets/mathe.js"></script>
+<script src="../assets/mathe-uebung.js"></script>
+<script>
+MatheUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Potenzregeln', storeKey: 'L3', count: 12,
+  specs: [{ kind: 'potRegel' }, { kind: 'potRegel' }, { kind: 'potMix' }, { kind: 'potMix' }, { kind: 'potLuecke' }, { kind: 'potWahr' }, { kind: 'vorzeichen' }]
+});
+</script>
+</body>
+</html>

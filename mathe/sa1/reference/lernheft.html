@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lernheft Mathe SA 1</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+<style>
+  .cover { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
+  .cover h1 { font-size: 2.8rem; }
+  ol.blatt { padding-left: 1.6rem; font: 1rem/1.5 var(--sans); }
+  ol.blatt > li { margin: 0 0 1.2rem; break-inside: avoid; }
+  ol.blatt .ausdruck { white-space: normal; font-size: 1.2rem; }
+  ol.blatt .hint { display: none; }
+  .line { display: block; border-bottom: 1px solid var(--muted); height: 2.2rem; width: 60%; }
+  .space { display: block; height: 4.5rem; }
+  .opts { color: var(--muted); margin-top: .3rem; }
+  .opts span { margin-right: 1.3rem; white-space: nowrap; }
+  ol.loes { font: .9rem/1.45 var(--sans); padding-left: 1.6rem; }
+  ol.loes > li { break-inside: avoid; margin-bottom: .7rem; }
+  ol.loes .rw { font-size: .92rem; line-height: 1.6; }
+  ol.loes .hint { font-size: .78rem; }
+  .chapter { break-before: page; }
+  .blatt-h { break-before: page; }
+  .meta { font: .85rem var(--sans); color: var(--muted); }
+  @media print {
+    @page { size: A4; margin: 15mm 14mm; }
+    html { font-size: 14px; }
+    .cover { min-height: 240mm; }
+    h2 { border-top: 0; margin-top: 0; }
+    ol.blatt > li { margin-bottom: 4mm; }
+    .rw > div, .ausdruck { white-space: normal; }
+  }
+</style>
+</head>
+<body>
+<main>
+<section class="cover">
+<p class="kicker">Mathematik · HTL Rennweg · 1. Klasse</p>
+<h1>Lernheft 1. Schularbeit</h1>
+<p class="lede">Rechnen mit Zahlen, Potenzen, Zehnerpotenzen, Gleitkommadarstellung und Einheiten – nach dem Skript (Kapitel 1.1–1.4). Mit Kurz-Erklärungen, acht Übungsblättern, einer Probe-Schularbeit und allen Lösungen mit Rechenweg.</p>
+<p class="meta">So arbeitest du damit: Erst das Kapitel lesen, dann das Übungsblatt <b>ohne Taschenrechner und ohne nachzuschauen</b> lösen, dann mit den Lösungen hinten vergleichen. Fehler rot anstreichen und die Regel dazuschreiben. Interaktiv üben: <span class="mono">hirogen.github.io/zahlensysteme/mathe/sa1</span></p>
+</section>
+
+<section class="chapter">
+<h2>1 · Reihenfolge, Klammern, Begriffe</h2>
+<ul>
+<li><b>Potenz vor Punkt vor Strich</b>, gleiche Stufe von links nach rechts, <b>innerste Klammer zuerst</b>.</li>
+<li><b>Potenz kommt vor dem Minus:</b> −2² = −4, (−2)² = 4, (−2)³ = −8.</li>
+<li>Summand + Summand = Summe · Minuend − Subtrahend = Differenz · Faktor · Faktor = Produkt · Dividend : Divisor = Quotient · Basis<sup>Exponent</sup> = Potenz · <sup>n</sup>√Radikand = Wurzel.</li>
+<li>Kommutativ (tauschen), assoziativ (Klammern verschieben), distributiv (ausmultiplizieren/herausheben) – nur für + und ·.</li>
+<li>Neutral: 0 bzw. 1. Invers: Gegenzahl bzw. Kehrwert. Durch 0 darf man nicht dividieren.</li>
+</ul>
+<div class="rw"><div>(8·9 + 7)·11 − 6·(5 + 72:6) = (72 + 7)·11 − 6·(5 + 12) = 79·11 − 6·17 = 869 − 102 = <b>767</b></div></div>
+
+<h2 style="margin-top:2rem">2 · Potenzregeln</h2>
+<div class="regeln">
+<div>x<sup>a</sup>·x<sup>b</sup> = x<sup>a+b</sup></div><div>x<sup>a</sup> : x<sup>b</sup> = x<sup>a−b</sup></div><div>(x<sup>a</sup>)<sup>b</sup> = x<sup>a·b</sup></div>
+<div>(a·b)<sup>n</sup> = a<sup>n</sup>b<sup>n</sup></div><div>a<sup>0</sup> = 1, a<sup>1</sup> = a</div><div>x<sup>−n</sup> = 1/x<sup>n</sup></div><div>a<sup>1/n</sup> = <sup>n</sup>√a</div>
+</div>
+<div class="rw"><div>(<span class="frac"><span>2<sup>−3</sup>·4<sup>2</sup></span><span>4<sup>−4</sup>·2<sup>2</sup></span></span>)<sup>−2</sup> = (2<sup>−5</sup>·4<sup>6</sup>)<sup>−2</sup> = 2<sup>10</sup>·4<sup>−12</sup> = 2<sup>10</sup>·2<sup>−24</sup> = <b>2<sup>−14</sup></b></div></div>
+
+<h2 style="margin-top:2rem">3 · Zehnerpotenzen</h2>
+<p>1. alles als 10er-Potenz (0,001 = 10<sup>−3</sup>, 10 000 = 10<sup>4</sup>), 2. Potenzregeln.</p>
+<div class="rw"><div>(<span class="frac"><span>100 · 10<sup>−5</sup></span><span>10<sup>−7</sup> · 0,000 01</span></span>)<sup>4</sup> = (<span class="frac"><span>10<sup>2</sup>·10<sup>−5</sup></span><span>10<sup>−7</sup>·10<sup>−5</sup></span></span>)<sup>4</sup> = (10<sup>2−(−7)</sup>)<sup>4</sup> = (10<sup>9</sup>)<sup>4</sup> = <b>10<sup>36</sup></b></div></div>
+</section>
+
+<section class="chapter">
+<h2>4 · Gleitkommadarstellung</h2>
+<p>Normiert: ± m · 10<sup>e</sup> mit 1 ≤ m &lt; 10. Komma nach links → Exponent +, nach rechts → Exponent −. 3,2E7 = 3,2·10<sup>7</sup>.</p>
+<div class="rw">
+<div>0,000 041 · 2 000 000 = 4,1·10<sup>−5</sup> · 2·10<sup>6</sup> = 8,2·10<sup>1</sup> = <b>82</b></div>
+<div><span class="frac"><span>−36 000 · 0,000 000 8</span><span>0,000 06 · 400 000</span></span> = <span class="frac"><span>−36·10<sup>3</sup> · 8·10<sup>−7</sup></span><span>6·10<sup>−5</sup> · 4·10<sup>5</sup></span></span> = −12 · 10<sup>−4</sup> = <b>−1,2·10<sup>−3</sup></b></div>
+</div>
+
+<h2 style="margin-top:2rem">5 · Einheiten</h2>
+<p>Vorsilben: da 10<sup>1</sup>, h 10<sup>2</sup>, k 10<sup>3</sup>, M 10<sup>6</sup>, G 10<sup>9</sup>, T 10<sup>12</sup>, P 10<sup>15</sup>, E 10<sup>18</sup> · d 10<sup>−1</sup>, c 10<sup>−2</sup>, m 10<sup>−3</sup>, μ 10<sup>−6</sup>, n 10<sup>−9</sup>, p 10<sup>−12</sup>, f 10<sup>−15</sup>, a 10<sup>−18</sup>.</p>
+<div class="formel">neu = alt · (alte Vorsilbe / neue Vorsilbe)<sup>k</sup> &nbsp; (k = 2 bei m², 3 bei m³)</div>
+<ul>
+<li>1 a = 100 m², 1 ha = 10 000 m² · 1 L = 1 dm³, 1 mL = 1 cm³, 1 μL = 1 mm³</li>
+<li>1 min = 60 s, 1 h = 3600 s, 1 d = 86 400 s · km/h : 3,6 = m/s</li>
+</ul>
+<div class="rw">
+<div>0,000 71 dm² = 7,1·10<sup>−4</sup> · (10<sup>−1</sup>/10<sup>−3</sup>)<sup>2</sup> mm² = 7,1·10<sup>−4</sup>·10<sup>4</sup> mm² = <b>7,1 mm²</b></div>
+<div>144 km/h = 144 : 3,6 m/s = <b>40 m/s</b></div>
+</div>
+</section>
+
+<h2 class="blatt-h">Übungsblatt 1 · Reihenfolge und Vorzeichen</h2>
+<ol class="blatt" data-blatt="1" data-seed="1101" data-specs='[{"kind":"vorzeichen"},{"kind":"vorzeichen"},{"kind":"reihenfolge","lvl":1},{"kind":"reihenfolge","lvl":2},{"kind":"reihenfolge","lvl":3}]' data-n="10"></ol>
+
+<h2 class="blatt-h">Übungsblatt 2 · Begriffe und Rechengesetze</h2>
+<ol class="blatt" data-blatt="2" data-seed="2202" data-specs='[{"kind":"begriff"},{"kind":"gesetz"},{"kind":"element"},{"kind":"null"},{"kind":"kopf"},{"kind":"distrib"},{"kind":"gleichung"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Übungsblatt 3 · Potenzregeln</h2>
+<ol class="blatt" data-blatt="3" data-seed="3303" data-specs='[{"kind":"potRegel"},{"kind":"potMix"},{"kind":"potLuecke"},{"kind":"potMix"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Übungsblatt 4 · Negative Exponenten und Wurzeln</h2>
+<ol class="blatt" data-blatt="4" data-seed="4404" data-specs='[{"kind":"potWert"},{"kind":"potWert"},{"kind":"potZahl"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Übungsblatt 5 · Zehnerpotenzen</h2>
+<ol class="blatt" data-blatt="5" data-seed="5505" data-specs='[{"kind":"zehnerWert"},{"kind":"zehner","lvl":2},{"kind":"zehner","lvl":3}]' data-n="10"></ol>
+
+<h2 class="blatt-h">Übungsblatt 6 · Gleitkomma</h2>
+<ol class="blatt" data-blatt="6" data-seed="6606" data-specs='[{"kind":"normieren"},{"kind":"festkomma"},{"kind":"gkMal"},{"kind":"gkDiv"},{"kind":"gkPot"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Übungsblatt 7 · Vorsilben und Umrechnen</h2>
+<ol class="blatt" data-blatt="7" data-seed="7707" data-specs='[{"kind":"vorsilbe"},{"kind":"umrechnen"},{"kind":"umrechnen"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Übungsblatt 8 · m², m³, Liter, Zeit</h2>
+<ol class="blatt" data-blatt="8" data-seed="8808" data-specs='[{"kind":"flaeche"},{"kind":"volumen"},{"kind":"zeit"},{"kind":"speed"},{"kind":"zusammen"}]' data-n="12"></ol>
+
+<h2 class="blatt-h">Probe-Schularbeit · alles gemischt <span class="meta">(50 Minuten, ohne TR, ohne Hilfe)</span></h2>
+<ol class="blatt" data-blatt="T" data-seed="9909" data-fixed="1" data-specs='[{"kind":"vorzeichen"},{"kind":"reihenfolge","lvl":2},{"kind":"reihenfolge","lvl":3},{"kind":"begriff"},{"kind":"gesetz"},{"kind":"potMix"},{"kind":"potWert"},{"kind":"potZahl"},{"kind":"zehner","lvl":3},{"kind":"normieren"},{"kind":"gkDiv"},{"kind":"gkPot"},{"kind":"vorsilbe"},{"kind":"umrechnen"},{"kind":"flaeche"},{"kind":"volumen"},{"kind":"zeit"},{"kind":"speed"}]'></ol>
+<p class="meta">Punkte: jede Aufgabe 1 Punkt. 16–18 sehr gut · 14–15 gut · 12–13 befriedigend · 9–11 genügend (geschätzt, nicht der Schlüssel des Lehrers).</p>
+
+<h2 class="blatt-h">Lösungen mit Rechenweg</h2>
+<div id="loesungen"></div>
+</main>
+<script src="../assets/mathe.js"></script>
+<script>
+(function () {
+  const M = Mathe;
+  let loes = '';
+  document.querySelectorAll('ol.blatt').forEach(ol => {
+    const r = M.rng(+ol.dataset.seed), specs = JSON.parse(ol.dataset.specs);
+    const fixed = !!ol.dataset.fixed, n = fixed ? specs.length : +ol.dataset.n;
+    const seen = new Set(), tasks = [];
+    let guard = 0;
+    while (tasks.length < n && guard++ < 500) {
+      const t = M.make(specs[tasks.length % specs.length], r);
+      if (seen.has(t.prompt)) continue; seen.add(t.prompt); tasks.push(t);
+    }
+    if (!fixed) for (let i = tasks.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [tasks[i], tasks[j]] = [tasks[j], tasks[i]]; }
+    ol.innerHTML = tasks.map(t => {
+      const a = t.mode === 'choice' ? '<div class="opts">' + t.choices.map(c => '<span>☐ ' + c + '</span>').join('') + '</div>'
+        : (/reihenfolge|zehner$|gkDiv|potZahl|potMix|zusammen/.test(t.kind) ? '<span class="space"></span>' : '') + '<span class="line"></span>';
+      return '<li>' + t.prompt + a + '</li>';
+    }).join('');
+    loes += '<h3>' + (ol.dataset.blatt === 'T' ? 'Probe-Schularbeit' : 'Übungsblatt ' + ol.dataset.blatt) + '</h3><ol class="loes">' +
+      tasks.map(t => '<li><b>' + t.show + '</b>' + (t.mode === 'choice' ? '' : '<div class="sol">' + t.solution + '</div>') + '</li>').join('') + '</ol>';
+  });
+  document.getElementById('loesungen').innerHTML = loes;
+})();
+</script>
+</body>
+</html>

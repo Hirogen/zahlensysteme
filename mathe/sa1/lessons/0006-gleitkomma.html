@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gleitkommadarstellung</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe SA 1</a> › Lektion 6</p>
+<p class="kicker">Lektion 6 · Skript 1.3 · ca. 25 Minuten</p>
+<h1>Gleitkomma: jede Zahl als <i>m</i> · 10<sup><i>e</i></sup></h1>
+<p class="lede">Reine Zehnerpotenzen sind schön – aber was ist mit 12 345 oder 0,0037? Man zerlegt die Zahl in „Ziffern“ und „Größenordnung“. So rechnet man mit riesigen und winzigen Zahlen fast im Kopf.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen aus Lektion 5: <span class="n"><sup>10<sup>4</sup> · 10<sup>−7</sup></sup>⁄<sub>10<sup>−5</sup></sub> = ?</span></summary><p>10<sup>4−7</sup> = 10<sup>−3</sup>, dann 10<sup>−3−(−5)</sup> = <b>10<sup>2</sup></b>. Falls nicht: <a href="0005-zehnerpotenzen.html">Lektion 5</a>.</p></details>
+
+<h2>Normierte Gleitkommadarstellung</h2>
+<div class="formel">± <b><i>m</i></b> · 10<sup><b><i>e</i></b></sup> &nbsp;&nbsp;<span style="font:.9rem var(--sans)">mit <b>1 ≤ <i>m</i> &lt; 10</b> (Mantisse) und ganzzahligem Exponenten <i>e</i></span></div>
+<p>Vor dem Komma steht also <b>genau eine Ziffer, und die ist nicht 0</b>.</p>
+<div class="rw">
+<div>12 345 = 1,2345 · 10<sup>4</sup><span class="note">normiert (TR: SCI-Modus)</span></div>
+<div>12 345 = 12,345 · 10<sup>3</sup><span class="note">nicht normiert (TR: ENG-Modus, Exponent in 3er-Schritten)</span></div>
+</div>
+
+<div class="stepper">
+<h3>So geht's: Komma schieben und mitzählen</h3>
+<div class="step"><div class="rw"><div>2026 = 2,026 · 10<sup>3</sup><span class="note">Komma 3 Stellen nach links → Exponent +3</span></div></div></div>
+<div class="step"><div class="rw"><div>7,4 = 7,4 · 10<sup>0</sup><span class="note">0 Stellen → 10<sup>0</sup></span></div></div></div>
+<div class="step"><div class="rw"><div>0,000 002 14 = 2,14 · 10<sup>−6</sup><span class="note">Komma 6 Stellen nach rechts → Exponent −6</span></div></div></div>
+<div class="step"><div class="rw"><div>−6 500 000 = −6,5 · 10<sup>6</sup><span class="note">das Minus bleibt einfach vorne</span></div></div></div>
+</div>
+<div class="key"><p><b>Merke:</b> Große Zahl (≥ 10) → positiver Exponent. Kleine Zahl (&lt; 1) → negativer Exponent. Kontrolle: Komma zurückschieben, die Zahl muss wieder herauskommen.</p></div>
+
+<h3>Am Computer und Taschenrechner</h3>
+<p><span class="n">3,2 · 10<sup>7</sup> = 3,2E7 = 3,2e7</span> und <span class="n">−9,1 · 10<sup>−31</sup> = −9,1E−31</span>. Eingabe am TR: <b>−9,1</b>, dann die Taste <b>×10<sup>x</sup></b> (ältere TR: <b>EE</b> bzw. <b>EXP</b> = „enter exponent“), dann <b>−31</b>.</p>
+
+<h2>Rechnen in Gleitkomma</h2>
+<div class="stepper">
+<h3>Multiplizieren: Mantissen zusammen, Zehnerpotenzen zusammen</h3>
+<div class="ausdruck">−0,000 003 · 440 000</div>
+<div class="step"><div class="rw"><div>= −3 · 10<sup>−6</sup> · 4,4 · 10<sup>5</sup><span class="note">umschreiben</span></div></div></div>
+<div class="step"><div class="rw"><div>= −3 · 4,4 · 10<sup>−6</sup> · 10<sup>5</sup> = −13,2 · 10<sup>−1</sup><span class="note">nicht normiert</span></div></div></div>
+<div class="step"><div class="rw"><div>= −1,32 · 10<sup>1</sup> · 10<sup>−1</sup> = −1,32 · 10<sup>0</sup> = <b>−1,32</b><span class="note">normieren</span></div></div></div>
+</div>
+<div class="stepper">
+<h3>Dividieren: erst kürzen – dafür ist „nicht normiert“ praktisch</h3>
+<div class="ausdruck"><span class="frac"><span>420 · 0,0004</span><span>0,003 · 20 000</span></span></div>
+<div class="step"><div class="rw"><div>= <span class="frac"><span>42 · 10<sup>1</sup> · 4 · 10<sup>−4</sup></span><span>3 · 10<sup>−3</sup> · 2 · 10<sup>4</sup></span></span><span class="note">ganze Mantissen: lassen sich kürzen</span></div></div></div>
+<div class="step"><div class="rw"><div>= <span class="frac"><span>42 · 4</span><span>3 · 2</span></span> · <span class="frac"><span>10<sup>−3</sup></span><span>10<sup>1</sup></span></span> = 28 · 10<sup>−4</sup><span class="note">42 : 3 = 14, 4 : 2 = 2</span></div></div></div>
+<div class="step"><div class="rw"><div>= 2,8 · 10<sup>−3</sup> = <b>0,0028</b><span class="note">normiert bzw. Festkomma</span></div></div></div>
+</div>
+<div class="stepper">
+<h3>Potenzieren: (<i>a</i>·<i>b</i>)<sup><i>n</i></sup> = <i>a</i><sup><i>n</i></sup>·<i>b</i><sup><i>n</i></sup></h3>
+<div class="ausdruck">2000<sup>−3</sup></div>
+<div class="step"><div class="rw"><div>= (2 · 10<sup>3</sup>)<sup>−3</sup> = 2<sup>−3</sup> · 10<sup>−9</sup> = <span class="frac"><span>1</span><span>8</span></span> · 10<sup>−9</sup></div></div></div>
+<div class="step"><div class="rw"><div>= 0,125 · 10<sup>−9</sup> = <b>1,25 · 10<sup>−10</sup></b><span class="note">0,125 = 1,25 · 10<sup>−1</sup></span></div></div></div>
+</div>
+<div class="trap"><p><span class="n">−0,05<sup>−2</sup></span>: Potenz kommt vor dem Minus! = −(5·10<sup>−2</sup>)<sup>−2</sup> = −<span class="n"><sup>1</sup>⁄<sub>25</sub></span> · 10<sup>4</sup> = <b>−400</b>. Aber (−0,05)<sup>2</sup> = +0,0025.</p></div>
+
+<h2>Jetzt du</h2>
+<p>Eintippen als <span class="mono">2,8·10^-3</span> (Knopf <b>·10^</b>) oder <span class="mono">2,8e-3</span>. Bei „normiert“-Aufgaben muss die Mantisse zwischen 1 und 10 liegen, bei „Dezimalzahl“-Aufgaben ohne Zehnerpotenz.</p>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://studyflix.de/mathematik/zehnerpotenzen-3311/wissenschaftliche-schreibweise">Studyflix: Wissenschaftliche Schreibweise</a> (so heißt die normierte Gleitkommadarstellung auch). Dein Skript S. 13–16.</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Wie stelle ich meinen Taschenrechner auf SCI?“ (Modell dazuschreiben).</div>
+
+<div class="nav"><a href="0005-zehnerpotenzen.html">← Lektion 5</a><a href="0007-si-vorsilben.html">Lektion 7: SI-Vorsilben →</a></div>
+</main>
+<script src="../assets/mathe.js"></script>
+<script src="../assets/mathe-uebung.js"></script>
+<script>
+MatheUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Gleitkomma', storeKey: 'L6', count: 14,
+  specs: [{ kind: 'normieren' }, { kind: 'normieren' }, { kind: 'festkomma' }, { kind: 'eNot' }, { kind: 'gkMal' }, { kind: 'gkDiv' }, { kind: 'gkPot' }, { kind: 'zehner', lvl: 3 }]
+});
+</script>
+</body>
+</html>

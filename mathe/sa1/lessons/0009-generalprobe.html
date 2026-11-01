@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generalprobe Mathe SA</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe SA 1</a> › Lektion 9</p>
+<p class="kicker">Lektion 9 · 50 Minuten · Donnerstag und öfter</p>
+<h1>Generalprobe: alles gemischt, wie bei der Schularbeit</h1>
+<p class="lede">Bei der SA kommt nichts schön nach Lektionen sortiert. Hier ist alles durcheinander, mit Zeitlimit, und Feedback gibt es erst am Ende. Am besten neben Papier und Stift machen – genau wie am Freitag.</p>
+
+<div class="key"><p><b>Vorher 2 Minuten, ohne nachzuschauen:</b> Schreib auf ein Blatt: die drei Stufen, die fünf Potenzregeln, <i>x</i><sup>−<i>n</i></sup> = ?, die Vorsilben von atto bis Exa, 1 L = ?, 1 h = ? s. Dann mit dem <a href="../reference/spickzettel.html">Spickzettel</a> vergleichen.</p></div>
+
+<div id="test"></div>
+
+<h2>Endlos-Training</h2>
+<p>Nach der Probe-SA weiterüben – immer neue gemischte Aufgaben aus allen vier Kapiteln.</p>
+<div id="mix"></div>
+
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Bei Gleitkomma-Divisionen mache ich immer Fehler, gib mir 5 extra.“</div>
+
+<div class="nav"><a href="0008-flaeche-volumen-zeit.html">← Lektion 8</a><a href="../index.html">Übersicht →</a></div>
+</main>
+<script src="../assets/mathe.js"></script>
+<script src="../assets/mathe-uebung.js"></script>
+<script>
+MatheUebung.test(document.getElementById('test'), {
+  title: 'Probe-Schularbeit', storeKey: 'L9', minutes: 50,
+  specs: [{ kind: 'vorzeichen' }, { kind: 'reihenfolge', lvl: 2 }, { kind: 'reihenfolge', lvl: 3 }, { kind: 'begriff' }, { kind: 'gesetz' },
+          { kind: 'potMix' }, { kind: 'potWert' }, { kind: 'potZahl' }, { kind: 'zehner', lvl: 3 },
+          { kind: 'normieren' }, { kind: 'gkDiv' }, { kind: 'gkPot' },
+          { kind: 'vorsilbe' }, { kind: 'umrechnen' }, { kind: 'flaeche' }, { kind: 'volumen' }, { kind: 'zeit' }, { kind: 'speed' }]
+});
+MatheUebung.mount(document.getElementById('mix'), {
+  title: 'Gemischt', storeKey: 'MIX', count: 15,
+  specs: ['vorzeichen', 'reihenfolge', 'begriff', 'gesetz', 'element', 'potRegel', 'potMix', 'potWert', 'potZahl', 'zehner', 'normieren', 'festkomma', 'gkMal', 'gkDiv', 'gkPot', 'vorsilbe', 'umrechnen', 'flaeche', 'volumen', 'zeit', 'speed', 'zusammen'].map(k => ({ kind: k }))
+});
+</script>
+</body>
+</html>

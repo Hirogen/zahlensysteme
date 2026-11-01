@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spickzettel Mathe SA 1</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/mathe.css">
+<style>
+  main { max-width: 62rem; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 0 2.2rem; }
+  @media (min-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+  h2 { font-size: 1.1rem; margin: 1.4em 0 .4em; }
+  ul.tight { padding-left: 1.1rem; font: .92rem/1.5 var(--sans); }
+  ul.tight li { margin: .15rem 0; }
+  table.ueber { width: 100%; }
+  .regeln { grid-template-columns: 1fr 1fr; }
+  .regeln > div { font-size: 1rem; padding: .4rem .7rem; }
+  @media print {
+    @page { size: A4; margin: 11mm; }
+    html { font-size: 13px; } body { font-size: 9pt; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 0 7mm; }
+    h1 { font-size: 17pt; margin: 0; } h2 { font-size: 10.5pt; margin: 2.5mm 0 1mm; border-top: .5pt solid #ccc; padding-top: 1.5mm; }
+    table.ueber th, table.ueber td { padding: .5mm 1.2mm; font-size: 8.3pt; }
+    ul.tight { font-size: 8.6pt; line-height: 1.35; }
+    .key, .trap { padding: 1.5mm 3mm; margin: 2mm 0; }
+    .regeln { gap: 1.5mm; margin: 1.5mm 0; } .regeln > div { font-size: 9pt; padding: 1mm 2mm; }
+    .formel { font-size: 9.5pt; padding: 1.5mm 3mm; margin: 1.5mm 0; }
+    .pagebreak { break-before: page; }
+  }
+</style>
+</head>
+<body>
+<main>
+<p class="crumbs no-print"><a href="../index.html">Mathe SA 1</a> › Spickzettel</p>
+<h1>Spickzettel Mathe – 1. Schularbeit</h1>
+<p class="muted" style="font-family:var(--sans);margin:.2rem 0 0">Rechnen mit Zahlen · Potenzen · Gleitkomma · Einheiten (Skript Kapitel 1.1–1.4)</p>
+
+<div class="grid">
+<section>
+<h2>1.1 Reihenfolge</h2>
+<ul class="tight">
+<li><b>3. Stufe</b> Potenz, Wurzel → <b>2. Stufe</b> · : → <b>1. Stufe</b> + − . Gleiche Stufe: von links nach rechts.</li>
+<li><b>Innerste Klammer zuerst.</b> ( ) [ ] { } bedeuten dasselbe.</li>
+<li><b>Potenz kommt vor dem Minus:</b> −2² = −4 · (−2)² = 4 · (−2)³ = −8 · −(−3)² = −9</li>
+<li>Negative Basis: gerader Exponent → +, ungerader → −.</li>
+<li>Pro Zeile nur einen Schritt, jede Zeile ganz abschreiben.</li>
+</ul>
+<h2>1.1 Begriffe und Gesetze</h2>
+<table class="ueber">
+<tr><td>Summand + Summand = <b>Summe</b></td><td>Minuend − Subtrahend = <b>Differenz</b></td></tr>
+<tr><td>Faktor · Faktor = <b>Produkt</b></td><td>Dividend : Divisor = <b>Quotient</b></td></tr>
+<tr><td>Basis<sup>Exponent</sup> = <b>Potenz</b></td><td><sup>Wurzelexp.</sup>√Radikand = <b>Wurzel</b></td></tr>
+</table>
+<ul class="tight">
+<li><b>Kommutativ</b> a+b = b+a, a·b = b·a · <b>Assoziativ</b> (a+b)+c = a+(b+c) · <b>Distributiv</b> a(b+c) = ab+ac (→ ausmultiplizieren, ← herausheben). Nur für + und ·!</li>
+<li>Neutral: <b>0</b> (Addition), <b>1</b> (Multiplikation). Invers: Gegenzahl −a, Kehrwert 1/a.</li>
+<li>a − b = a + (−b), a : b = a · 1/b. <b>Nie durch 0 dividieren</b> (0·a = 0 lässt sich nicht rückgängig machen).</li>
+</ul>
+
+<h2>1.2 Potenzregeln</h2>
+<div class="regeln">
+<div>x<sup>a</sup> · x<sup>b</sup> = x<sup>a+b</sup></div>
+<div>x<sup>a</sup> : x<sup>b</sup> = x<sup>a−b</sup></div>
+<div>(x<sup>a</sup>)<sup>b</sup> = x<sup>a·b</sup></div>
+<div>(a·b)<sup>n</sup> = a<sup>n</sup>·b<sup>n</sup> · (x/y)<sup>n</sup> = x<sup>n</sup>/y<sup>n</sup></div>
+<div>a<sup>0</sup> = 1 · a<sup>1</sup> = a</div>
+<div>x<sup>−n</sup> = (1/x)<sup>n</sup> = 1/x<sup>n</sup> · x<sup>−1</sup> = 1/x</div>
+<div>a<sup>1/n</sup> = <sup>n</sup>√a</div>
+<div>(1/3)<sup>−2</sup> = 3<sup>2</sup> = 9</div>
+</div>
+<ul class="tight">
+<li>Nur bei <b>gleicher Basis</b>! Mehrere Basen: erst sortieren.</li>
+<li>Nicht kommutativ: 2³ ≠ 3². Nicht assoziativ: (2²)³ = 64, 2<sup>(2³)</sup> = 256.</li>
+<li>Negativer Exponent macht das Ergebnis <b>nicht</b> negativ: 5<sup>−2</sup> = 0,04.</li>
+</ul>
+</section>
+
+<section>
+<h2>1.2 Zehnerpotenzen</h2>
+<ul class="tight">
+<li>10<sup>n</sup> = 1 mit n Nullen · 10<sup>−n</sup> = 1 an der n-ten Nachkommastelle (0,001 = 10<sup>−3</sup>).</li>
+<li><b>Rezept:</b> 1. alles als 10er-Potenz, 2. Potenzregeln. 1/0,000 001 = 10<sup>6</sup>.</li>
+<li>Minus minus: 10<sup>17</sup> : 10<sup>−13</sup> = 10<sup>17−(−13)</sup> = 10<sup>30</sup>.</li>
+</ul>
+
+<h2>1.3 Gleitkomma</h2>
+<div class="formel">normiert: ± <b>m</b> · 10<sup><b>e</b></sup> mit <b>1 ≤ m &lt; 10</b></div>
+<ul class="tight">
+<li>Komma n Stellen nach links → 10<sup>+n</sup>; nach rechts → 10<sup>−n</sup>. 0,000 002 14 = 2,14·10<sup>−6</sup>.</li>
+<li>TR: SCI = normiert, ENG = Exponent in 3er-Schritten. 3,2E7 = 3,2·10<sup>7</sup>. Eingabe: Taste ×10<sup>x</sup> / EE / EXP.</li>
+<li><b>Mal:</b> Mantissen mal, Exponenten plus, dann normieren.</li>
+<li><b>Durch:</b> ganze Mantissen hinschreiben, <b>kürzen</b>, dann normieren.</li>
+<li><b>Hoch:</b> (2·10<sup>3</sup>)<sup>−3</sup> = 2<sup>−3</sup>·10<sup>−9</sup> = 0,125·10<sup>−9</sup> = 1,25·10<sup>−10</sup>.</li>
+</ul>
+
+<h2>1.4 Vorsilben</h2>
+<table class="ueber vors">
+<tr><td>10<sup>1</sup></td><td>Zehn</td><td>Deka</td><td>da</td><td>10<sup>−1</sup></td><td>Zehntel</td><td>Dezi</td><td>d</td></tr>
+<tr><td>10<sup>2</sup></td><td>Hundert</td><td>Hekto</td><td>h</td><td>10<sup>−2</sup></td><td>Hundertstel</td><td>Zenti</td><td>c</td></tr>
+<tr><td>10<sup>3</sup></td><td>Tausend</td><td>Kilo</td><td>k</td><td>10<sup>−3</sup></td><td>Tausendstel</td><td>Milli</td><td>m</td></tr>
+<tr><td>10<sup>6</sup></td><td>Million</td><td>Mega</td><td>M</td><td>10<sup>−6</sup></td><td>Millionstel</td><td>Mikro</td><td>μ</td></tr>
+<tr><td>10<sup>9</sup></td><td>Milliarde</td><td>Giga</td><td>G</td><td>10<sup>−9</sup></td><td>Milliardstel</td><td>Nano</td><td>n</td></tr>
+<tr><td>10<sup>12</sup></td><td>Billion</td><td>Tera</td><td>T</td><td>10<sup>−12</sup></td><td>Billionstel</td><td>Piko</td><td>p</td></tr>
+<tr><td>10<sup>15</sup></td><td>Billiarde</td><td>Peta</td><td>P</td><td>10<sup>−15</sup></td><td>Billiardstel</td><td>Femto</td><td>f</td></tr>
+<tr><td>10<sup>18</sup></td><td>Trillion</td><td>Exa</td><td>E</td><td>10<sup>−18</sup></td><td>Trillionstel</td><td>Atto</td><td>a</td></tr>
+</table>
+
+<h2>1.4 Umrechnen</h2>
+<div class="formel">neu = alt · (<span class="frac"><span>alte Vorsilbe</span><span>neue Vorsilbe</span></span>)<sup>k</sup> &nbsp; k = 1, 2 (m²), 3 (m³)</div>
+<ul class="tight">
+<li>0,000 67 A = 6,7·10<sup>−4</sup> · 1/10<sup>−6</sup> μA = 670 μA</li>
+<li><b>Vorsilbe wird mit-potenziert:</b> 1 cm² = (10<sup>−2</sup> m)² = 10<sup>−4</sup> m² · 6,4 mm² = 6,4·10<sup>6</sup> μm²</li>
+<li>1 a = 1 dam² = 100 m² · 1 ha = 1 hm² = 10 000 m²</li>
+<li><b>1 L = 1 dm³</b> · 1 mL = 1 cm³ · 1 μL = 1 mm³ · 1 m³ = 1000 L</li>
+<li>Zeit: 1 min = 60 s · 1 h = 3600 s · 1 d = 86 400 s (nicht dezimal!)</li>
+<li><b>km/h : 3,6 = m/s</b> · m/s · 3,6 = km/h · Zähler und Nenner getrennt umrechnen.</li>
+<li>Kontrolle: größere Einheit → kleinere Zahl.</li>
+</ul>
+</section>
+</div>
+</main>
+</body>
+</html>
