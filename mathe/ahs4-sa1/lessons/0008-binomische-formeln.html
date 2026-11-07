@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Binomische Formeln</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/terme.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe 4. Klasse</a> › Lektion 8</p>
+<p class="kicker">Lektion 8 · Terme · ca. 25 Minuten</p>
+<h1>Binomische Formeln: die Abkürzung für „jedes Glied mit jedem“</h1>
+<p class="lede">(<i>a</i> + <i>b</i>)<sup>2</sup> ist einfach (<i>a</i> + <i>b</i>)(<i>a</i> + <i>b</i>) – das kannst du seit <a href="0007-rechnen-mit-termen.html">Lektion 7</a>. Weil es so oft vorkommt, lernt man das Ergebnis auswendig. Und man muss es auch rückwärts erkennen.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen aus Lektion 7: <span class="n">(<i>x</i> + 3)(<i>x</i> + 3) = ?</span></summary><p><i>x</i><sup>2</sup> + 3<i>x</i> + 3<i>x</i> + 9 = <b><i>x</i><sup>2</sup> + 6<i>x</i> + 9</b>. Das ist schon die 1. binomische Formel.</p></details>
+
+<h2>Die drei Formeln</h2>
+<div class="regeln">
+<div>(<i>a</i> + <i>b</i>)<sup>2</sup> = <i>a</i><sup>2</sup> + 2<i>ab</i> + <i>b</i><sup>2</sup><small>1. Formel (Plus-Formel)</small></div>
+<div>(<i>a</i> − <i>b</i>)<sup>2</sup> = <i>a</i><sup>2</sup> − 2<i>ab</i> + <i>b</i><sup>2</sup><small>2. Formel (Minus-Formel)</small></div>
+<div>(<i>a</i> + <i>b</i>)(<i>a</i> − <i>b</i>) = <i>a</i><sup>2</sup> − <i>b</i><sup>2</sup><small>3. Formel (Plus-Minus-Formel)</small></div>
+</div>
+<div class="mengen">
+<svg viewBox="0 -14 300 244" role="img" aria-label="Quadrat mit Seite a plus b, zerlegt in a², zweimal ab und b²" style="max-width:17rem">
+<rect x="20" y="10" width="150" height="150" style="fill:var(--accent-soft);stroke:var(--ink);stroke-width:1.5"/>
+<rect x="170" y="10" width="60" height="150" style="fill:var(--blue-soft);stroke:var(--ink);stroke-width:1.5"/>
+<rect x="20" y="160" width="150" height="60" style="fill:var(--blue-soft);stroke:var(--ink);stroke-width:1.5"/>
+<rect x="170" y="160" width="60" height="60" style="fill:var(--ok-soft);stroke:var(--ink);stroke-width:1.5"/>
+<g style="font:italic 20px var(--serif);fill:var(--ink)" text-anchor="middle"><text x="95" y="92">a²</text><text x="200" y="92">ab</text><text x="95" y="197">ab</text><text x="200" y="197">b²</text></g>
+<g style="font:italic 16px var(--serif);fill:var(--muted)" text-anchor="middle"><text x="95" y="6" dy="0">a</text><text x="200" y="6">b</text><text x="250" y="90">a</text><text x="250" y="195">b</text></g>
+</svg>
+</div>
+<p class="hint">Warum 2<i>ab</i>? Das Quadrat mit Seite <i>a</i> + <i>b</i> besteht aus <i>a</i><sup>2</sup>, <i>b</i><sup>2</sup> und <b>zwei</b> Rechtecken <i>ab</i>.</p>
+
+<h2>Vorwärts: ausmultiplizieren</h2>
+<div class="stepper">
+<h3>Beispiel: (3x − 2y)²</h3>
+<div class="step"><div class="rw"><div><i>a</i> = 3<i>x</i>, &nbsp;<i>b</i> = 2<i>y</i>, &nbsp;2. Formel</div></div></div>
+<div class="step"><div class="rw"><div>= (3<i>x</i>)<sup>2</sup> − 2 · 3<i>x</i> · 2<i>y</i> + (2<i>y</i>)<sup>2</sup><span class="note">a und b in Klammern einsetzen!</span></div></div></div>
+<div class="step"><div class="rw"><div>= <b>9<i>x</i><sup>2</sup> − 12<i>xy</i> + 4<i>y</i><sup>2</sup></b></div></div></div>
+</div>
+<div class="trap"><p><b>Das Mittelglied nie vergessen:</b> (<i>x</i> + 5)<sup>2</sup> ist <b>nicht</b> <i>x</i><sup>2</sup> + 25, sondern <i>x</i><sup>2</sup> + 10<i>x</i> + 25. Und (3<i>x</i>)<sup>2</sup> = 9<i>x</i><sup>2</sup>, nicht 3<i>x</i><sup>2</sup>. Bei der 2. Formel ist das letzte Glied trotzdem <b>plus</b>.</p></div>
+
+<h2>Rückwärts: als Produkt schreiben</h2>
+<div class="stepper">
+<h3>Beispiel: 16x² − 24x + 9</h3>
+<div class="step"><div class="rw"><div>Außen zwei Quadrate? 16<i>x</i><sup>2</sup> = (4<i>x</i>)<sup>2</sup>, &nbsp;9 = 3<sup>2</sup> ✓</div></div></div>
+<div class="step"><div class="rw"><div>Mittelglied prüfen: 2 · 4<i>x</i> · 3 = 24<i>x</i> ✓, Minus → 2. Formel</div></div></div>
+<div class="step"><div class="rw"><div>= <b>(4<i>x</i> − 3)<sup>2</sup></b></div></div></div>
+</div>
+<div class="rw"><div>49 − <i>a</i><sup>2</sup> = 7<sup>2</sup> − <i>a</i><sup>2</sup> = <b>(7 + <i>a</i>)(7 − <i>a</i>)</b><span class="note">Differenz zweier Quadrate → 3. Formel</span></div></div>
+<p class="hint">Stimmt das Mittelglied nicht (z. B. <i>x</i><sup>2</sup> + 6<i>x</i> + 4), ist es <b>keine</b> binomische Formel.</p>
+
+<h2>Im Kopf rechnen</h2>
+<div class="rw">
+<div>99<sup>2</sup> = (100 − 1)<sup>2</sup> = 10 000 − 200 + 1 = 9 801</div>
+<div>41 · 39 = (40 + 1)(40 − 1) = 1 600 − 1 = 1 599</div>
+</div>
+
+<h2>Jetzt du</h2>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://de.wikibooks.org/wiki/Mathematrix:_AT_AHS/_Theorie/_Klasse_4">Wikibooks – Mathematrix, Klasse 4: Binomische Formeln</a> (ausmultiplizieren, faktorisieren, erkennen – mit Beispielen).</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Wie erkenne ich, ob 4x² + 12x + 9 eine binomische Formel ist?“</div>
+
+<div class="nav"><a href="0007-rechnen-mit-termen.html">← Lektion 7</a><a href="0009-generalprobe.html">Lektion 9: Generalprobe →</a></div>
+</main>
+<script src="../assets/terme.js"></script>
+<script src="../assets/terme-uebung.js"></script>
+<script>
+TermeUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: binomische Formeln', storeKey: 'L8', count: 12,
+  specs: [{ kind: 'bfAus' }, { kind: 'bfAus' }, { kind: 'bfAus' }, { kind: 'bfFaktor' }, { kind: 'bfFaktor' }, { kind: 'bfLuecke' }, { kind: 'bfKopf' }, { kind: 'bfMix' }, { kind: 'bfFalle' }, { kind: 'rtKuerzen' }, { kind: 'rtHeraus' }, { kind: 'wKlammer' }]
+});
+</script>
+</body>
+</html>

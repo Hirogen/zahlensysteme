@@ -1,0 +1,77 @@
+/* Ergänzung zu ../../assets/style.css – Mathe 4. Klasse (übernommen aus mathe/sa1/assets/mathe.css + Wurzeln, Perioden, Zahlenstrahl). */
+.ausdruck { font: 1.3rem/1.9 var(--serif); margin: .5rem 0 .2rem; overflow-x: auto; white-space: nowrap; padding-bottom: .2rem; }
+.ueb-q .ausdruck { font-size: 1.35rem; }
+.n { font-family: var(--serif); font-size: 1em; white-space: normal; }
+sup { font-size: .68em; line-height: 0; }
+sup sup { font-size: .8em; }
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 .12em; line-height: 1.25; }
+.frac > span:first-child { border-bottom: 1.5px solid currentColor; padding: 0 .2em .08em; }
+.frac > span:last-child { padding: .08em .2em 0; }
+.ausdruck .frac { font-size: .95em; }
+.frac .frac { font-size: .9em; }
+
+/* Rechenweg: eine Zeile pro Schritt, Erklärung rechts daneben */
+.rw { font: 1.02rem/1.8 var(--serif); overflow-x: auto; margin: .3rem 0; }
+.rw > div { white-space: nowrap; }
+.rw .note, .note { font: .78rem var(--sans); color: var(--accent); margin-left: .6rem; white-space: normal; }
+.rw .hint { font-size: .82rem; }
+.sol p { margin: .4rem 0; }
+
+/* Vorsilbe rot, Einheit blau – wie im Skript */
+.vs { color: var(--accent); font-weight: 600; }
+.eh { color: var(--blue); }
+
+/* Eingabe */
+.mbar { display: flex; gap: .35rem; margin-top: .5rem; flex-wrap: wrap; }
+.mbar button { min-width: 2.6rem; padding: .3rem .6rem; font: 600 1rem var(--mono); }
+.preview { font: .9rem var(--sans); color: var(--muted); min-height: 1.4em; margin-top: .35rem; }
+.preview sup { font-size: .75em; }
+input.txt { font-family: var(--mono); }
+label.radio { font: 1rem var(--sans); display: inline-flex; gap: .3rem; align-items: center; margin-right: .8rem; }
+.choices button sup { font-size: .7em; }
+mark { background: var(--accent-soft); color: inherit; padding: 0 .15em; border-radius: 3px; font-weight: 700; }
+
+/* Formel-Kästen und Tabellen */
+.formel { font: 1.1rem/1.7 var(--serif); background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: .7rem 1rem; margin: .8rem 0; overflow-x: auto; }
+.formel b { color: var(--accent); }
+.regeln { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .6rem; margin: 1rem 0; }
+.regeln > div { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: .6rem .9rem; font: 1.1rem/1.6 var(--serif); }
+.regeln small { display: block; font: .8rem var(--sans); color: var(--muted); }
+table.ueber { font: .92rem/1.4 var(--sans); border-collapse: collapse; margin: .6rem 0; }
+table.ueber th, table.ueber td { padding: .3rem .6rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.ueber th { color: var(--muted); font-weight: 600; white-space: nowrap; }
+table.ueber td.f { color: var(--accent); font-weight: 600; }
+table.vors td:nth-child(3), table.vors td:nth-child(7) { color: var(--accent); font-weight: 600; }
+table.vors td:nth-child(4), table.vors td:nth-child(8) { color: var(--accent); font-weight: 700; text-align: center; }
+table.vors td:nth-child(5) { border-left: 2px solid var(--rule); }
+.stufen { display: grid; gap: .4rem; margin: 1rem 0; font: .95rem/1.4 var(--sans); }
+.stufen > div { display: grid; grid-template-columns: 5.5rem 1fr; gap: .8rem; align-items: center; background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: .5rem .9rem; }
+.stufen b { font-size: 1.05rem; color: var(--accent); }
+.zahlenstrahl { overflow-x: auto; margin: 1rem 0; }
+@media print {
+  .preview, .mbar { display: none !important; }
+  .ausdruck { white-space: normal; }
+}
+
+/* Wurzel mit Überstrich, Periode */
+.wz { white-space: nowrap; }
+.rad { border-top: 1.5px solid currentColor; padding: .06em .12em 0; margin-left: .02em; }
+.wz .wi { font-size: .6em; margin-right: -.35em; vertical-align: .9em; }
+.per { text-decoration: overline; }
+.pvx { color: var(--ink); font: 1rem var(--serif); }
+
+/* Zahlenstrahl */
+svg.zs { width: 100%; max-width: 34rem; height: auto; display: block; margin: .6rem 0; color: var(--ink); }
+.zsbox { overflow-x: auto; }
+
+/* Ankreuzen */
+.choices.multi { gap: .5rem; }
+label.check { font: 1.05rem var(--sans); display: inline-flex; gap: .45rem; align-items: center; border: 1px solid var(--rule); border-radius: 8px; padding: .45rem .9rem; cursor: pointer; background: var(--paper); }
+label.check input { width: 1.1rem; height: 1.1rem; }
+label.check:has(input:checked) { border-color: var(--ink); }
+
+/* Mengen-Diagramm */
+.mengen { margin: 1rem 0; }
+.mengen svg { width: 100%; max-width: 36rem; height: auto; display: block; }
+@media print { svg.zs { max-width: 12cm; } }
+.rad:has(> .frac) { display: inline-block; vertical-align: middle; padding-top: .1em; }

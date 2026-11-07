@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Generalprobe Mathe SA</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/terme.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe 4. Klasse</a> › Lektion 9</p>
+<p class="kicker">Lektion 9 · 50 Minuten · Donnerstag und öfter</p>
+<h1>Generalprobe: alles gemischt, wie bei der Schularbeit</h1>
+<p class="lede">Bei der Schularbeit kommt nichts schön nach Lektionen sortiert. Hier ist alles durcheinander, mit Zeitlimit, und Feedback gibt es erst am Ende. Mach das mit Papier und Stift daneben – genau wie am Freitag.</p>
+
+<div class="key"><p><b>Vorher 2 Minuten, ohne nachzuschauen:</b> Schreib auf ein Blatt: die vier Wurzelregeln, die Quadratzahlen bis 15², ℕ ⊂ … ⊂ ℝ, was ]2; 5] bedeutet, die Potenzregeln und die drei binomischen Formeln. Dann mit dem <a href="../reference/spickzettel.html">Spickzettel</a> vergleichen.</p></div>
+
+<div id="test"></div>
+
+<h2>Endlos-Training</h2>
+<p>Nach der Probe-SA weiterüben – immer neue gemischte Aufgaben aus allen acht Lektionen.</p>
+<div id="mix"></div>
+
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Bei Intervallen mit ∞ mache ich immer Fehler, gib mir 5 extra.“</div>
+
+<div class="nav"><a href="0008-binomische-formeln.html">← Lektion 8</a><a href="../index.html">Übersicht →</a></div>
+</main>
+<script src="../assets/terme.js"></script>
+<script src="../assets/terme-uebung.js"></script>
+<script>
+TermeUebung.test(document.getElementById('test'), {
+  title: 'Probe-Schularbeit', storeKey: 'L9', minutes: 50,
+  specs: ['wQuad', 'wMalDiv', 'wTeil', 'wUnter', 'wZusammen', 'zmAnkreuzen', 'zmAussage', 'ivAusMenge', 'ivAusBild',
+          'tmDef', 'tmAufstellen', 'ptPot', 'ptDiv', 'rtPlusMinus', 'rtPoly', 'rtHeraus', 'bfAus', 'bfFaktor'].map(k => ({ kind: k }))
+});
+TermeUebung.mount(document.getElementById('mix'), {
+  title: 'Gemischt', storeKey: 'MIX', count: 15,
+  specs: Object.keys(Terme.GEN).map(k => ({ kind: k }))
+});
+</script>
+</body>
+</html>

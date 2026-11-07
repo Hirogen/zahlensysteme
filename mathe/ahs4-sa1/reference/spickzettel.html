@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spickzettel Mathe 4. Klasse</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/terme.css">
+<style>
+  main { max-width: 62rem; }
+  .rad:has(> .frac) { display: inline-block; vertical-align: middle; padding-top: .1em; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 0 2.2rem; }
+  @media (min-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+  h2 { font-size: 1.1rem; margin: 1.4em 0 .4em; }
+  ul.tight { padding-left: 1.1rem; font: .92rem/1.5 var(--sans); }
+  ul.tight li { margin: .15rem 0; }
+  table.ueber { width: 100%; }
+  table.qz { font: .85rem var(--sans); border-collapse: collapse; width: 100%; }
+  table.qz td { padding: .1rem .25rem; text-align: center; border-bottom: 1px solid var(--rule); }
+  table.qz tr:nth-child(odd) td { color: var(--muted); }
+  table.qz tr:nth-child(even) td { font-weight: 600; }
+  .regeln { grid-template-columns: 1fr 1fr; }
+  .regeln > div { font-size: 1rem; padding: .4rem .7rem; }
+  .zsmini svg.zs { max-width: 11rem; margin: 0; }
+  table.iv td { vertical-align: middle; }
+  @media print {
+    @page { size: A4; margin: 10mm; }
+    html { font-size: 13px; } body { font-size: 9pt; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 0 7mm; }
+    h1 { font-size: 16pt; margin: 0; } h2 { font-size: 10.5pt; margin: 2.2mm 0 1mm; border-top: .5pt solid #ccc; padding-top: 1.3mm; }
+    table.ueber th, table.ueber td { padding: .4mm 1.2mm; font-size: 8.3pt; }
+    table.qz td { font-size: 7.8pt; padding: .2mm .5mm; }
+    ul.tight { font-size: 8.5pt; line-height: 1.33; }
+    .key, .trap { padding: 1.3mm 3mm; margin: 1.6mm 0; }
+    .trap::before { font-size: 6.5pt; }
+    .regeln { gap: 1.3mm; margin: 1.3mm 0; } .regeln > div { font-size: 8.8pt; padding: .8mm 2mm; }
+    .formel { font-size: 9.3pt; padding: 1.3mm 3mm; margin: 1.3mm 0; }
+    .zsmini svg.zs { max-width: 3.6cm; }
+    .pagebreak { break-before: page; }
+  }
+</style>
+</head>
+<body>
+<main>
+<p class="crumbs no-print"><a href="../index.html">Mathe 4. Klasse SA 1</a> › Spickzettel</p>
+<h1>Spickzettel Mathe – 1. Schularbeit (4. Klasse)</h1>
+<p class="muted" style="font-family:var(--sans);margin:.2rem 0 0">Reelle Zahlen (Wurzeln, Zahlenmengen, Intervalle) · Terme (Termarten, Aufstellen, Potenzen, binomische Formeln, Rechnen)</p>
+
+<div class="grid">
+<section>
+<h2>1 · Wurzeln: Regeln</h2>
+<p style="font:.9rem/1.4 var(--sans);margin:.2rem 0"><span class="wz">√<span class="rad"><i>a</i></span></span> ist die Zahl ≥ 0, die zum Quadrat <i>a</i> ergibt. <i>a</i> heißt <b>Radikand</b>, nur <i>a</i> ≥ 0 erlaubt.</p>
+<div class="regeln">
+<div><span class="wz">√<span class="rad"><i>a</i>·<i>b</i></span></span> = <span class="wz">√<span class="rad"><i>a</i></span></span> · <span class="wz">√<span class="rad"><i>b</i></span></span><small>√2 · √8 = √16 = 4</small></div>
+<div><span class="wz">√<span class="rad"><i>a</i> : <i>b</i></span></span> = <span class="wz">√<span class="rad"><i>a</i></span></span> : <span class="wz">√<span class="rad"><i>b</i></span></span><small>√72 : √2 = √36 = 6</small></div>
+<div>(<span class="wz">√<span class="rad"><i>a</i></span></span>)<sup>2</sup> = <i>a</i><small>(3√2)² = 9 · 2 = 18</small></div>
+<div><span class="wz">√<span class="rad"><i>a</i><sup>2</sup></span></span> = |<i>a</i>|<small>√((−5)²) = √25 = 5</small></div>
+<div><span class="wz">√<span class="rad"><span class="frac"><span>9</span><span>16</span></span></span></span> = <span class="frac"><span>3</span><span>4</span></span><small>Zähler und Nenner getrennt</small></div>
+<div><span class="wz">√<span class="rad">0,09</span></span> = 0,3<small>doppelt so viele Kommastellen unten</small></div>
+</div>
+<div class="trap"><p style="margin:0">Für + und − gibt es <b>keine</b> Regel: <span class="wz">√<span class="rad">9 + 16</span></span> = √25 = 5, aber √9 + √16 = 7. · Eine Wurzel ist <b>nie negativ</b>: √16 = 4 (nicht ±4). · √(−9) gibt es in ℝ nicht.</p></div>
+<ul class="tight">
+<li>Schätzen: 7² = 49 &lt; 50 &lt; 64 = 8² → 7 &lt; √50 &lt; 8.</li>
+</ul>
+
+<h2>Quadratzahlen</h2>
+<table class="qz">
+<tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+<tr><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td><td>49</td><td>64</td><td>81</td><td>100</td><td>121</td><td>144</td><td>169</td></tr>
+<tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td></td></tr>
+<tr><td>196</td><td>225</td><td>256</td><td>289</td><td>324</td><td>361</td><td>400</td><td>441</td><td>484</td><td>529</td><td>576</td><td>625</td><td></td></tr>
+</table>
+
+<h2>2 · Teilweise Wurzelziehen · unter die Wurzel</h2>
+<div class="formel"><span class="wz">√<span class="rad">72</span></span> = <span class="wz">√<span class="rad"><b>36</b> · 2</span></span> = <span class="wz">√<span class="rad">36</span></span> · <span class="wz">√<span class="rad">2</span></span> = <b>6</b><span class="wz">√<span class="rad">2</span></span></div>
+<ul class="tight">
+<li><b>Größte</b> Quadratzahl als Faktor suchen (4, 9, 16, 25, 36, 49, 64, 81, 100 …). Fertig, wenn unten keine Quadratzahl mehr steckt.</li>
+<li><b>Unter die Wurzel bringen</b> (umgekehrt): Faktor <b>quadriert</b> hinein: 3<span class="wz">√<span class="rad">5</span></span> = <span class="wz">√<span class="rad">9 · 5</span></span> = <span class="wz">√<span class="rad">45</span></span>.</li>
+<li><b>Vergleichen:</b> beide unter die Wurzel: 2√6 = √24 &lt; √27 = 3√3.</li>
+<li><b>Zusammenfassen</b> nur gleiche Wurzeln (wie 2<i>x</i> + 5<i>x</i>): 2√3 + 5√3 = 7√3. Vorher teilweise ziehen: √12 + √27 = 2√3 + 3√3 = 5√3. √2 + √3 bleibt so!</li>
+<li>Mit Klammer: √2(√8 + 3) = √16 + 3√2 = 4 + 3√2.</li>
+</ul>
+
+<h2>3 · Zahlenmengen</h2>
+<div class="formel">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ &nbsp; · &nbsp; irrational = ℝ\ℚ</div>
+<table class="ueber">
+<tr><td><b>ℕ</b> natürlich</td><td>{0, 1, 2, 3, …} – in Österreich <b>mit 0</b></td></tr>
+<tr><td><b>ℤ</b> ganz</td><td>{…, −2, −1, 0, 1, 2, …}</td></tr>
+<tr><td><b>ℚ</b> rational</td><td>alle Brüche <i>p</i>/<i>q</i> (<i>q</i> ≠ 0): abbrechende und <b>periodische</b> Dezimalzahlen (0,<span class="per">3</span> = 1/3)</td></tr>
+<tr><td><b>ℝ\ℚ</b> irrational</td><td>unendlich, <b>nicht periodisch</b>: √2, √10, π, 2√3 (manche Bücher: 𝕀)</td></tr>
+<tr><td><b>ℝ</b> reell</td><td>rational + irrational, füllt die Zahlengerade lückenlos</td></tr>
+</table>
+<ul class="tight">
+<li>Immer ausführbar: + und · in ℕ · − in ℤ · : (nicht durch 0) in ℚ · √ (aus Zahlen ≥ 0) in ℝ.</li>
+<li>ℚ und ℝ sind <b>dicht</b> (zwischen zwei Zahlen liegt immer noch eine), ℕ und ℤ nicht. ℕ hat eine kleinste Zahl (0), ℤ nicht.</li>
+<li>Erst vereinfachen: √16 = 4 ∈ ℕ · −√9 = −3 ∈ ℤ · 12/4 = 3 ∈ ℕ · √3·√3 = 3. 1,4142 ist abbrechend → ℚ (nur Näherung von √2).</li>
+<li>Periode → Bruch: 0,<span class="per">7</span> = 7/9 · 0,<span class="per">12</span> = 12/99 = 4/33.</li>
+</ul>
+</section>
+
+<section>
+<h2>4 · Intervalle</h2>
+<table class="ueber iv">
+<tr><th>Menge</th><th>Intervall</th><th>Zahlenstrahl</th></tr>
+<tr><td>2 ≤ <i>x</i> ≤ 5</td><td><b>[2; 5]</b> geschlossen</td><td class="zsmini" data-zs='{"from":0,"to":7,"iv":"[2;5]"}'></td></tr>
+<tr><td>2 &lt; <i>x</i> &lt; 5</td><td><b>]2; 5[</b> offen</td><td class="zsmini" data-zs='{"from":0,"to":7,"iv":"]2;5["}'></td></tr>
+<tr><td>2 &lt; <i>x</i> ≤ 5</td><td><b>]2; 5]</b> halboffen</td><td class="zsmini" data-zs='{"from":0,"to":7,"iv":"]2;5]"}'></td></tr>
+<tr><td><i>x</i> ≥ 2</td><td><b>[2; ∞[</b></td><td class="zsmini" data-zs='{"from":0,"to":7,"iv":"[2;∞["}'></td></tr>
+<tr><td><i>x</i> &lt; 5</td><td><b>]−∞; 5[</b></td><td class="zsmini" data-zs='{"from":0,"to":7,"iv":"]-∞;5["}'></td></tr>
+</table>
+<ul class="tight">
+<li>Klammer <b>zur Zahl hin</b> [2 … 5] = gehört dazu (≤, ●). Klammer <b>weg</b> ]2 … 5[ = gehört nicht dazu (&lt;, ○).</li>
+<li>Bei <b>∞</b> ist die Klammer <b>immer offen</b>. Strichpunkt trennt die Grenzen.</li>
+<li>Andere Schreibweise: (2; 5] = ]2; 5]. Manche zeichnen am Zahlenstrahl Klammern statt ●/○.</li>
+<li>„mindestens 2“ = <i>x</i> ≥ 2 · „höchstens 5“ = <i>x</i> ≤ 5 · „größer als“ / „kleiner als“ = &gt; / &lt;.</li>
+<li>Ganze Zahlen in ]−2; 3] → −1; 0; 1; 2; 3.</li>
+</ul>
+
+<h2>5 · Termarten · Bruchterme · Aufstellen</h2>
+<ul class="tight">
+<li>Glieder zählen (durch + / − getrennt): <b>Monom</b> 1 (3<i>x</i>²<i>y</i>) · <b>Binom</b> 2 (2<i>x</i> + 3) · <b>Trinom</b> 3 · <b>Polynom</b> viele.</li>
+<li><b>Bruchterm:</b> Variable im <b>Nenner</b> (3/<i>x</i>, (<i>x</i>+1)/(<i>x</i>−2)). <i>x</i>/3 ist <b>kein</b> Bruchterm.</li>
+<li><b>Nenner ≠ 0:</b> Nenner = 0 setzen und lösen. <span class="frac"><span>5</span><span><i>x</i> − 4</span></span> → <i>x</i> ≠ 4, D = ℝ\{4}. <i>x</i>(<i>x</i>+3) → 0 und −3. <i>x</i>² − 9 → 3 und −3. <i>x</i>² + 1 wird nie 0 → D = ℝ.</li>
+<li>Gleicher Nenner: Zähler addieren: 3/<i>x</i> + 5/<i>x</i> = 8/<i>x</i>. Sonst erweitern: 2/<i>x</i> + 1/(3<i>x</i>) = 6/(3<i>x</i>) + 1/(3<i>x</i>) = 7/(3<i>x</i>).</li>
+</ul>
+<table class="ueber">
+<tr><td>vermehrt um / Summe</td><td>+</td><td>das Dreifache von <i>x</i></td><td>3<i>x</i></td></tr>
+<tr><td>vermindert um / Differenz</td><td>−</td><td>die Hälfte von <i>x</i></td><td><i>x</i>/2</td></tr>
+<tr><td>Produkt</td><td>·</td><td>Quadrat der <b>Summe</b></td><td>(<i>a</i> + <i>b</i>)²</td></tr>
+<tr><td>Quotient</td><td>:</td><td><b>Summe</b> der Quadrate</td><td><i>a</i>² + <i>b</i>²</td></tr>
+<tr><td>um 3 größer als</td><td>+ 3</td><td>Kehrwert von <i>x</i></td><td>1/<i>x</i></td></tr>
+</table>
+<ul class="tight"><li>Rechteck: <i>u</i> = 2<i>a</i> + 2<i>b</i>, <i>A</i> = <i>a</i>·<i>b</i>. Aufeinanderfolgende Zahlen: <i>n</i>, <i>n</i>+1, <i>n</i>+2.</li></ul>
+
+<h2>6 · Potenzen mit Variablen</h2>
+<div class="regeln">
+<div><i>x</i><sup><i>m</i></sup> · <i>x</i><sup><i>n</i></sup> = <i>x</i><sup><i>m</i>+<i>n</i></sup></div>
+<div><i>x</i><sup><i>m</i></sup> : <i>x</i><sup><i>n</i></sup> = <i>x</i><sup><i>m</i>−<i>n</i></sup></div>
+<div>(<i>x</i><sup><i>m</i></sup>)<sup><i>n</i></sup> = <i>x</i><sup><i>m</i>·<i>n</i></sup></div>
+<div>(<i>a</i>·<i>b</i>)<sup><i>n</i></sup> = <i>a</i><sup><i>n</i></sup>·<i>b</i><sup><i>n</i></sup></div>
+<div><i>x</i><sup>−<i>n</i></sup> = <span class="frac"><span>1</span><span><i>x</i><sup><i>n</i></sup></span></span> · (<span class="frac"><span>2</span><span>3</span></span>)<sup>−2</sup> = <span class="frac"><span>9</span><span>4</span></span></div>
+<div><i>x</i><sup>0</sup> = 1 · <i>x</i><sup>1</sup> = <i>x</i></div>
+</div>
+<ul class="tight">
+<li>Zahlen rechnen, Exponenten nach Regel: (−2<i>x</i>³<i>y</i>)³ = −8<i>x</i><sup>9</sup><i>y</i>³ · 12<i>x</i><sup>5</sup><i>y</i> : (4<i>x</i>²<i>y</i>) = 3<i>x</i>³.</li>
+<li><b>Falle:</b> 3<i>x</i>² + 2<i>x</i>² = 5<i>x</i>² (nicht <i>x</i><sup>4</sup>) · <i>x</i>³ + <i>x</i>² bleibt · −3<sup>2</sup> = −9, (−3)<sup>2</sup> = 9.</li>
+</ul>
+
+<h2>7 · Rechnen mit Termen</h2>
+<ul class="tight">
+<li><b>+/−:</b> nur gleichartige Glieder (gleiche Variablen, gleiche Exponenten). <b>Minus vor der Klammer</b> → alle Vorzeichen drehen: −(2<i>x</i> − 3) = −2<i>x</i> + 3.</li>
+<li><b>Monom · Klammer:</b> −3<i>a</i>(2<i>a</i> − 5) = −6<i>a</i>² + 15<i>a</i>. <b>Klammer · Klammer:</b> jedes Glied mit jedem: (2<i>x</i> − 3)(<i>x</i> + 4) = 2<i>x</i>² + 5<i>x</i> − 12.</li>
+<li><b>: Monom:</b> jedes Glied einzeln: (12<i>x</i>³ − 8<i>x</i>²) : 4<i>x</i> = 3<i>x</i>² − 2<i>x</i>.</li>
+<li><b>Herausheben:</b> größter Teiler + kleinste Potenz: 6<i>x</i>² − 9<i>x</i> = 3<i>x</i>(2<i>x</i> − 3). Probe: ausmultiplizieren.</li>
+<li><b>Kürzen</b> nur Faktoren, nie aus Summen: (<i>x</i>² − 9)/(<i>x</i> + 3) = (<i>x</i>+3)(<i>x</i>−3)/(<i>x</i>+3) = <i>x</i> − 3.</li>
+</ul>
+
+<h2>8 · Binomische Formeln</h2>
+<div class="formel">
+1. (<i>a</i> + <i>b</i>)² = <i>a</i>² <b>+ 2<i>ab</i></b> + <i>b</i>²<br>
+2. (<i>a</i> − <i>b</i>)² = <i>a</i>² <b>− 2<i>ab</i></b> + <i>b</i>²<br>
+3. (<i>a</i> + <i>b</i>)(<i>a</i> − <i>b</i>) = <i>a</i>² − <i>b</i>²
+</div>
+<ul class="tight">
+<li>(3<i>x</i> − 2<i>y</i>)² = 9<i>x</i>² − 12<i>xy</i> + 4<i>y</i>² · <b>Mittelglied nicht vergessen!</b> (<i>x</i> + 5)² ≠ <i>x</i>² + 25.</li>
+<li><b>Rückwärts:</b> außen Quadrate suchen, Mittelglied prüfen: 9<i>x</i>² − 12<i>x</i> + 4 = (3<i>x</i> − 2)² · 4<i>x</i>² − 25 = (2<i>x</i> + 5)(2<i>x</i> − 5).</li>
+<li>Kopfrechnen: 41² = (40 + 1)² = 1681 · 29 · 31 = 30² − 1 = 899.</li>
+<li>Bei „− ( … )²“ erst ausrechnen, <b>in Klammer</b> lassen, dann Vorzeichen drehen.</li>
+</ul>
+</section>
+</div>
+</main>
+<script src="../assets/terme.js"></script>
+<script src="../assets/terme-uebung.js"></script>
+</body>
+</html>

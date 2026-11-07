@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zahlenmengen</title>
+<link rel="stylesheet" href="../../../assets/style.css">
+<link rel="stylesheet" href="../assets/terme.css">
+</head>
+<body>
+<main>
+<p class="crumbs"><a href="../index.html">Mathe 4. Klasse</a> › Lektion 3</p>
+<p class="kicker">Lektion 3 · Reelle Zahlen · ca. 20 Minuten</p>
+<h1>Zahlenmengen: jede neue Menge repariert eine Rechnung, die vorher nicht ging</h1>
+<p class="lede">3 − 5 geht in ℕ nicht, 1 : 3 geht in ℤ nicht, <span class="wz">√<span class="rad">2</span></span> geht in ℚ nicht. Jedes Mal braucht man eine größere Zahlenmenge – so kommt man bis zu den reellen Zahlen.</p>
+
+<details class="box"><summary style="cursor:pointer">Aufwärmen aus Lektion 2: <span class="n"><span class="wz">√<span class="rad">48</span></span> = ?</span></summary><p><span class="wz">√<span class="rad">16 · 3</span></span> = <b>4<span class="wz">√<span class="rad">3</span></span></b>. Falls nicht: <a href="0002-teilweise-wurzelziehen.html">Lektion 2</a>.</p></details>
+
+<h2>Die vier Mengen</h2>
+<div class="mengen">
+<svg viewBox="0 0 560 250" role="img" aria-label="Verschachtelte Zahlenmengen N in Z in Q in R">
+<rect x="4" y="4" width="552" height="242" rx="18" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.5"/>
+<rect x="20" y="36" width="390" height="196" rx="14" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.2"/>
+<rect x="36" y="68" width="250" height="150" rx="12" style="fill:var(--bg);stroke:var(--ink);stroke-width:1.2"/>
+<rect x="52" y="100" width="120" height="104" rx="10" style="fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.5"/>
+<g style="font:600 20px var(--serif);fill:var(--ink)"><text x="530" y="30" text-anchor="end">ℝ</text><text x="395" y="60" text-anchor="end">ℚ</text><text x="272" y="92" text-anchor="end">ℤ</text><text x="160" y="124" text-anchor="end" style="fill:var(--accent)">ℕ</text></g>
+<g style="font:15px var(--sans);fill:var(--ink)">
+<text x="64" y="150">0  1  2  7</text><text x="64" y="180">√16 = 4</text>
+<text x="190" y="140">−3</text><text x="190" y="170">−12</text><text x="190" y="200">−√9</text>
+<text x="300" y="110">3/4</text><text x="300" y="140">−0,25</text><text x="300" y="170">0,3̅</text><text x="300" y="200">2,18̅</text>
+<text x="430" y="90">√2</text><text x="430" y="125">π</text><text x="430" y="160">2√3</text><text x="430" y="195">0,1010010…</text>
+</g>
+<text x="440" y="232" style="font:12px var(--sans);fill:var(--muted)">irrational (ℝ\ℚ)</text>
+</svg>
+</div>
+<table class="ueber">
+<tr><th>ℕ natürliche</th><td>0, 1, 2, 3, … <span class="muted">(in Österreich gehört die 0 dazu)</span></td></tr>
+<tr><th>ℤ ganze</th><td>…, −2, −1, 0, 1, 2, … – dazu die negativen</td></tr>
+<tr><th>ℚ rationale</th><td>alle Brüche <span class="frac"><span><i>p</i></span><span><i>q</i></span></span> mit <i>p</i>, <i>q</i> ∈ ℤ, <i>q</i> ≠ 0. Als Dezimalzahl: <b>abbrechend</b> (0,25) oder <b>periodisch</b> (0,<span class="per">3</span>)</td></tr>
+<tr><th>ℝ reelle</th><td>ℚ und dazu die <b>irrationalen</b> Zahlen: unendlich viele Nachkommastellen <b>ohne Periode</b> (<span class="wz">√<span class="rad">2</span></span>, π)</td></tr>
+</table>
+<div class="formel">ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ &nbsp;&nbsp;<span class="muted" style="font:.85rem var(--sans)">jede Menge steckt ganz in der nächsten</span></div>
+<p>Wer in ℕ ist, ist also automatisch auch in ℤ, ℚ und ℝ. Bei „Kreuze alle Mengen an“ heißt das: ab der kleinsten passenden Menge <b>alle</b> rechts davon ankreuzen. Ausnahme: Irrationale Zahlen liegen nur in ℝ, <b>nicht</b> in ℚ.</p>
+
+<h2>Woran du eine Zahl erkennst</h2>
+<div class="rw">
+<div><span class="wz">√<span class="rad">16</span></span> = 4 ∈ ℕ<span class="note">erst ausrechnen, dann einordnen!</span></div>
+<div>−<span class="wz">√<span class="rad">9</span></span> = −3 ∈ ℤ</div>
+<div><span class="frac"><span>12</span><span>4</span></span> = 3 ∈ ℕ<span class="note">sieht aus wie ein Bruch, ist aber ganz</span></div>
+<div>0,<span class="per">18</span> = <span class="frac"><span>18</span><span>99</span></span> ∈ ℚ<span class="note">periodisch → rational</span></div>
+<div><span class="wz">√<span class="rad">10</span></span> ∈ ℝ\ℚ<span class="note">10 ist keine Quadratzahl → irrational</span></div>
+</div>
+<div class="trap"><p>1,4142 ist <b>rational</b> (abbrechend) – es ist nur eine Näherung für <span class="wz">√<span class="rad">2</span></span>. Und π ist nicht 3,14, sondern irrational.</p></div>
+<p class="hint">Periodisch → Bruch: eine Ziffer Periode durch 9 (0,<span class="per">7</span> = 7/9), zwei Ziffern durch 99 (0,<span class="per">45</span> = 45/99 = 5/11).</p>
+
+<h2>Eigenschaften: wo geht welche Rechnung immer?</h2>
+<table class="ueber">
+<tr><th>Rechnung</th><th>immer möglich ab</th><th>Gegenbeispiel davor</th></tr>
+<tr><td>+ und ·</td><td class="f">ℕ</td><td>–</td></tr>
+<tr><td>−</td><td class="f">ℤ</td><td>3 − 5 ∉ ℕ</td></tr>
+<tr><td>: (nicht durch 0)</td><td class="f">ℚ</td><td>1 : 3 ∉ ℤ</td></tr>
+<tr><td>√ (aus Zahlen ≥ 0)</td><td class="f">ℝ</td><td>√2 ∉ ℚ</td></tr>
+</table>
+<ul>
+<li><b>Abgeschlossen</b> heißt: Das Ergebnis bleibt in der Menge. ℕ ist bezüglich + abgeschlossen, bezüglich − nicht.</li>
+<li><b>Dicht:</b> Zwischen zwei rationalen Zahlen liegt immer noch eine (z. B. ihr Mittelwert). Zwischen 2 und 3 liegt aber keine ganze Zahl.</li>
+<li>ℕ hat eine kleinste Zahl (0), ℤ nicht.</li>
+<li>Irrational + irrational kann rational sein: <span class="wz">√<span class="rad">2</span></span> + (−<span class="wz">√<span class="rad">2</span></span>) = 0, <span class="wz">√<span class="rad">2</span></span> · <span class="wz">√<span class="rad">2</span></span> = 2.</li>
+<li>Die reellen Zahlen füllen die Zahlengerade <b>lückenlos</b>.</li>
+</ul>
+
+<h2>Jetzt du</h2>
+<div id="ueb"></div>
+
+<div class="source"><b>Zum Nachlesen</b><a href="https://de.wikibooks.org/wiki/Mathematrix:_AT_AHS/_Theorie/_Klasse_4">Wikibooks – Mathematrix (österreichisches Lehrbuch), Klasse 4: Zahlenmengen und reelle Zahlen</a>. Ausführlicher: <a href="https://mathe-online.univie.ac.at/skripten/zahlen/zahlen_wurzeln.pdf">Uni Wien, mathe online – Wurzeln</a> (Abschnitt irrationale Zahlen).</div>
+<div class="ask">💬 <b>Etwas unklar?</b> Frag Claude – z. B. „Warum ist 0,999… genau 1?“ oder „Woran sehe ich, dass √2 irrational ist?“</div>
+
+<div class="nav"><a href="0002-teilweise-wurzelziehen.html">← Lektion 2</a><a href="0004-intervalle.html">Lektion 4: Intervalle →</a></div>
+</main>
+<script src="../assets/terme.js"></script>
+<script src="../assets/terme-uebung.js"></script>
+<script>
+TermeUebung.mount(document.getElementById('ueb'), {
+  title: 'Übung: Zahlenmengen', storeKey: 'L3', count: 12,
+  specs: [{ kind: 'zmKleinste' }, { kind: 'zmKleinste' }, { kind: 'zmAnkreuzen' }, { kind: 'zmAnkreuzen' }, { kind: 'zmAussage' }, { kind: 'zmAussage' }, { kind: 'zmOperation' }, { kind: 'zmPeriode' }, { kind: 'wTeil' }, { kind: 'wRegel' }]
+});
+</script>
+</body>
+</html>
